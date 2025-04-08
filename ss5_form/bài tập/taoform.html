@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+
         .container {
 
         }
@@ -34,6 +35,13 @@
         .maunennho{
             background-color: honeydew;
             padding: 15px;
+        }
+        .p2{
+            background-color: darkkhaki;
+            width: 530px;
+        }
+        td:nth-child(1){
+            color: blue;
         }
     </style>
 </head>
@@ -79,6 +87,44 @@
 
             </tr>
         </table>
+    </form>
+</div>
+<hr>
+<div class="p2" style="padding:15px;margin-left:327px ">
+    <h1 style="background-color: lightblue;color: blue;padding-bottom: 5px;padding-top: 5px;margin-top: 5px;margin-bottom: 5px">ĐĂNG KÍ HỌC VIÊN</h1>
+    <form>
+        <table>
+            <tr>
+                <td >Họ và tên</td>
+                <td><input TYPE="text" NAME="yourname" ></td>
+            </tr>
+            <tr>
+                <td >Ngày sinh</td>
+                <td><input TYPE="date" NAME="ngaysinh" ></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td><input type="radio" name="Nam" value="Nam"><span>Nam</span><input type="radio" name="Nu" value="Nữ"><span>Mữ</span></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><textarea style="height:60px;width: 300px"></textarea></td>
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td><select><option>--Chọn lớp--</option></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>Số điện thoại</td>
+                <td><input type="tel"></td>
+            </tr>
+        </table>
+        <button type="submit" style="margin-left: 90px">Đăng kí</button>
+        <button type="reset">Nhập lại</button>
     </form>
 </div>
 </body>
