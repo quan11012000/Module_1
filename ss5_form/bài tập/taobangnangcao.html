@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        .chess td:not(:first-child) {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+        .tkb th:first-child{
+            background-color: red;
+        }
+        .tkb th:not(:first-child):not(:last-child){
+            background-color: yellow;
+        }
+        .tkb th:last-child{
+            background-color: blue;
+        }
+        .tkb td:first-child{
+            color: red;
+        }
+        .tkb td:last-child{
+            color: blue;
+        }
+        .tkb th{
+            border: 3px solid white;
+            color: white;
+            padding: 10px;
+        }
+        .tkb tr:not(:nth-child(2)) td{
+            border: 5px solid grey;
+        }
+        .tkb tr:nth-child(2) td{
+            text-align: center;
+            padding: 10px;
+        }
+
+        .chess td, .chess th{
+            padding: 10px;
+        }
+        .chess tr:nth-child(even) td:nth-child(odd):not(:first-child), .chess tr:nth-child(odd) td:nth-child(even) {
+            background-color: black;
+        }
+        .chess td:first-child{
+            background-color: red;
+        }
+        .chess th{
+            background-color: red;
+        }
+        div.relative{
+            position: relative;
+            width: 100px;
+            height: 50px;
+            top: 15px;
+            left: 35px;
+        }
+        div.absolute{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width:40px;
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+<table class="chess">
+    <tr>
+        <th></th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    <td>E</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>G</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>H</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</table>
+<hr>
+<div>
+    <h1> Tháng 10 - October</h1>
+    <table class="tkb">
+        <tr>
+            <th>C.Nhật</th>
+            <th>T.Hai</th>
+            <th>T.Ba</th>
+            <th>T.Tư</th>
+            <th>T.Năm</th>
+            <th>T.Sáu</th>
+            <th>T.Bảy</th>
+        </tr>
+        <tr>
+            <td >Sun</td>
+            <td>Mon</td>
+            <td>Tue</td>
+            <td>Wed</td>
+            <td>Thu</td>
+            <td>Fri</td>
+            <td>Sat</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><div class="relative">1<div class="absolute">13</div>
+            </div></td>
+            <td><div class="relative">2<div class="absolute">14</div>
+            </div></td>
+            <td><div class="relative">3<div class="absolute">15</div>
+            </div></td>
+        </tr>
+        <tr>
+            <td><div class="relative">4<div class="absolute">16</div>
+            </div></td>
+            <td><div class="relative">5<div class="absolute">17</div>
+            </div></td>
+            <td><div class="relative">6<div class="absolute">18</div>
+            </div></td>
+            <td><div class="relative">7<div class="absolute">19</div>
+            </div></td>
+            <td><div class="relative">8<div class="absolute">20</div>
+            </div></td>
+            <td><div class="relative">9<div class="absolute">21</div>
+            </div></td>
+            <td><div class="relative">10<div class="absolute">22</div>
+            </div></td>
+        </tr>
+        <tr>
+            <td><div class="relative">11<div class="absolute">23</div>
+            </div></td>
+            <td><div class="relative">12<div class="absolute">24</div>
+            </div></td>
+            <td><div class="relative">13<div class="absolute">25</div>
+            </div></td>
+            <td><div class="relative">14<div class="absolute">26</div>
+            </div></td>
+            <td><div class="relative">15<div class="absolute">27</div>
+            </div></td>
+            <td><div class="relative">16<div class="absolute">28</div>
+            </div></td>
+            <td><div class="relative">17<div class="absolute">29</div>
+            </div></td>
+        </tr>
+        <tr>
+            <td><div class="relative">18<div class="absolute">1.9</div>
+            </div></td>
+            <td><div class="relative">19<div class="absolute">2</div>
+            </div></td>
+            <td><div class="relative">20<div class="absolute">3</div>
+            </div></td>
+            <td><div class="relative">21<div class="absolute">4</div>
+            </div></td>
+            <td><div class="relative">22<div class="absolute">5</div>
+            </div></td>
+            <td><div class="relative">23<div class="absolute">6</div>
+            </div></td>
+            <td><div class="relative">24<div class="absolute">7</div>
+            </div></td>
+        </tr>
+        <tr>
+            <td><div class="relative">25<div class="absolute">8</div>
+            </div></td>
+            <td><div class="relative">26<div class="absolute">9</div>
+            </div></td>
+            <td><div class="relative">27<div class="absolute">10</div>
+            </div></td>
+            <td><div class="relative">28<div class="absolute">11</div>
+            </div></td>
+            <td><div class="relative">29<div class="absolute">12</div>
+            </div></td>
+            <td><div class="relative">30<div class="absolute">13</div>
+            </div></td>
+            <td><div class="relative">31<div class="absolute">14</div>
+            </div></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
