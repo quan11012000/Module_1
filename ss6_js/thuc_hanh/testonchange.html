@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select id="sl1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+</body>
+<script>
+    /*function oc1(){
+        var selectvalue = document.getElementById("sl1").value;
+        alert(selectvalue);)
+    }*/
+    var selectonchane = document.getElementById("sl1");
+    selectonchane.addEventListener("change",hienthi);
+    function hienthi(){
+        var selectvalue = document.getElementById("sl1").value;
+        alert(selectvalue);
+    }
+</script>
+</html>

@@ -1,0 +1,12 @@
+let Input_Width;
+let Input_Height;
+Input_Width = prompt("Enter the width");
+Input_Height = prompt("Enter the height");
+let width = parseInt(Input_Width);
+let height = parseInt(Input_Height);
+let area = width * height;
+document.write('Enter Width = '+ width);
+document.write('<br/>');
+document.write('Enter Height = '+ height);
+document.write('<br/>');
+document.write("Dien tich hinh chu nhat la = "+ area);
