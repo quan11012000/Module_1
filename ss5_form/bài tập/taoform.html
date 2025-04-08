@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+
+        }
+        .ali{
+            margin-left:50px;
+        }
+        .doc{
+          vertical-align: top;
+        }
+        .cach{
+            margin-right: 30px;
+        }
+        .mau{
+            color: red;
+
+        }
+        .maunen{
+            background-color: lightblue;
+            width: 500px;
+            margin: auto;
+            padding: 30px;
+        }
+        .to{
+            background-color: coral;
+            text-align: center;
+            margin-top: 0px;
+        }
+        .maunennho{
+            background-color: honeydew;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="maunen">
+    <form class="maunennho">
+        <h1 class="to" >SỞ THÍCH CỦA BẠN</h1>
+        <table>
+            <tr>
+                <td>Họ và tên</td>
+                <td><input TYPE="text" NAME="name" SIZE=30></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input TYPE="text" NAME="email" SIZE=30></td>
+            </tr>
+            <tr>
+                <td class="doc">Sở thích</td>
+                <td>
+                    <table class="mau" >
+                        <tr>
+                            <td><input type="checkbox" name="cbx" value="thethao"> Thể thao</td>
+                            <td><input type="checkbox" name="cbx" value="docsach"> Đọc sách</td>
+                            <td><input type="checkbox" name="cbx" value="amnhac"> Âm nhạc</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="cbx" value="luotweb">Lướt web</td>
+                            <td><input type="checkbox" name="cbx" value="choigame"> Chơi game</td>
+                            <td><input type="checkbox" name="cbx" value="dienanh"> Điện ảnh</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="cbx" value="dulich"> Du lịch</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td >
+                    <input type="submit" name="submit" value="Gửi thông tin" class="cach">
+                    <input type="reset" name="reset" value="Nhập lại">
+                </td>
+
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
