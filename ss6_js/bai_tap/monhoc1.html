@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table  >
+        <tr>
+            <th>Toán</th>
+            <th>Hoá</th>
+            <th>Lý</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number"  id="Math" style="text-align: center"></td>
+            <td><input type="number" id="Chems" style="text-align: center"></td>
+            <td><input type="number" id="Phys" style="text-align: center"></td>
+            <td><button id="avg" >Tính</button></td>
+        </tr>
+        <tr>
+            <td  ><span style="font-size:9px; color: red;display: none" id="ok">Điểm phải &gt; 0,&lt; 10, length &lt; 5</span></td>
+            <td ><span style="font-size:9px; color: red;display: none" id="ok2">Điểm phải &gt; 0,&lt; 10, length &lt; 5</span></td>
+            <td ><span style="font-size:9px; color: red;display: none" id="ok1">Điểm phải &gt; 0,&lt; 10, length &lt; 5</span></td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="result2"></div>
+    <div id="result"></div>
+    <script>
+        document.getElementById("Math").addEventListener('blur', function (){
+            if(document.getElementById("Math").value <0
+                || document.getElementById("Math").value > 10
+                || document.getElementById("Math").value.length>5){
+                document.getElementById("ok").style.display="block";
+            }else{
+                document.getElementById("ok").style.display="none";
+            }
+        });
+        document.getElementById("Phys").addEventListener('blur', function (){
+            if(document.getElementById("Phys").value <0
+                || document.getElementById("Phys").value > 10
+                || document.getElementById("Phys").value.length>5){
+                document.getElementById("ok1").style.display="table-cell";
+            }else{
+                document.getElementById("ok1").style.display="none";
+            }
+        });
+        document.getElementById("Chems").addEventListener('blur', function (){
+            if(document.getElementById("Chems").value <0
+                || document.getElementById("Chems").value > 10
+                || document.getElementById("Chems").value.length>5){
+                document.getElementById("ok2").style.display="table-cell";
+            }else{
+                document.getElementById("ok2").style.display="none";
+            }
+        });
+        document.getElementById("avg").addEventListener("click", function () {
+            let math = parseFloat(document.getElementById("Math").value);
+            let chems = parseFloat(document.getElementById("Chems").value);
+            let phys = parseFloat(document.getElementById("Phys").value);
+            let avg= ((math+chems+phys)/3).toFixed(2);
+            document.getElementById("result2").innerHTML= avg;
+            if (avg>=8){
+                document.getElementById("result").innerHTML="Xếp loại giỏi";
+            }else{
+                if(avg>=6.5){
+                    document.getElementById("result").innerHTML="Xếp loại khá";
+                }else{
+                    if(avg>=5){
+                        document.getElementById("result").innerHTML="Xếp loại trung bình";
+                    }
+                    else{
+                        if(avg>=3.5){
+                            document.getElementById("result").innerHTML="Xếp loại yếu";
+                        }else{
+                            document.getElementById("result").innerHTML="Xếp loại kém";
+                        }
+                    }
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

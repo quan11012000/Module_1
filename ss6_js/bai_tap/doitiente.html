@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="number" min="0" step="0.1" id="inp"></td>
+            <td><select id="sl1">
+                <option value="VND">VNĐ</option>
+                <option value="USA">USA</option>
+            </select></td>
+            <td><select id="sl2">
+                <option value="VND">VNĐ</option>
+                <option value="USA">USA</option>
+            </select></td>
+            <td><button id="bt">Convert</button></td>
+        </tr>
+    </table>
+    <div id="result"></div>
+<script>
+    document.getElementById("bt").addEventListener("click", function () {
+        let nhap_vao = parseFloat(document.getElementById("inp").value);
+        let sl1 = document.getElementById("sl1").value;
+        let sl2 = document.getElementById("sl2").value;
+        if(sl1==sl2){
+            if(sl1=='VND'){
+                document.getElementById("result").innerHTML= nhap_vao.toLocaleString('vi', {sytle: 'currency'}) + ' Đ';
+            }else{
+                document.getElementById("result").innerHTML= nhap_vao.toLocaleString('vi', {sytle: 'currency'}) + ' $'
+            }
+        }else{
+            if(sl1=='VND'){
+                document.getElementById("result").innerHTML= (nhap_vao/23000).toLocaleString('vi', {sytle: 'currency'})+ ' $'
+            }
+            else{
+                document.getElementById("result").innerHTML= (nhap_vao*23000).toLocaleString('vi', {sytle: 'currency'})+' Đ'
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

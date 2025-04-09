@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="ave"></div>
+<script>
+    function myFunction() {
+
+        let Physics = prompt("Nhập điểm Lý");
+        let Chemistry = prompt("Nhập điểm Hoá");
+        let Biology = prompt("Nhập điểm Sinh");
+        let Phy = parseFloat(Physics);
+        let Chem = parseFloat(Chemistry);
+        let Bio = parseFloat(Biology);
+        let average = (Phy + Chem + Bio) / 3;
+        document.getElementById("ave").innerHTML = average.toFixed(2);
+
+    }
+    myFunction();
+</script>
+</body>
+</html>
