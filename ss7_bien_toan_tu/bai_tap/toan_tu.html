@@ -122,8 +122,7 @@
         }
 
     })
-        document.getElementById("celsius").addEventListener("click", function (e) {
-        e.preventDefault();
+        document.getElementById("celsius").addEventListener("click", function () {
         let temperature = parseFloat(document.getElementById("temperature").value);
         let result3 = (temperature * 9 + 160)/5;
         document.getElementById("result3").innerHTML= "nhiet do la: "+ result3;
@@ -132,14 +131,12 @@
         document.getElementById("result3").innerHTML="";
         document.getElementById("temperature").value = "";
     })
-        document.getElementById("acreage").addEventListener("click", function (e) {
-        e.preventDefault();
+        document.getElementById("acreage").addEventListener("click", function () {
         let radius = parseFloat(document.getElementById("radius").value);
         acreage = radius * radius *3.14;
         document.getElementById("result4").innerHTML="diện tích hình tròn là = "+acreage.toFixed(2);
     })
-        document.getElementById("perimeter").addEventListener("click", function (e) {
-        e.preventDefault();
+        document.getElementById("perimeter").addEventListener("click", function () {
         let radius = parseFloat(document.getElementById("radius").value);
         perimeter = radius *2 *3.14;
         document.getElementById("result5").innerHTML="chu vi hình tròn là = "+perimeter.toFixed(2);

@@ -13,16 +13,20 @@
             <td></td>
         </tr>
         <tr>
-            <td><input type="number" min="0" step="0.1" id="inp" onmouseover=""></td>
+            <td><input type="number" min="0" step="0.1" id="inp" onmouseover="" ></td>
+
             <td><select id="sl1">
-                <option value="VND">VNĐ</option>
-                <option value="USA">USA</option>
+                <option value="VND" >VNĐ</option>
+                <option value="USD">USD</option>
             </select></td>
             <td><select id="sl2">
                 <option value="VND">VNĐ</option>
-                <option value="USA">USA</option>
+                <option value="USD">USD</option>
             </select></td>
             <td><button id="bt">Convert</button></td>
+        </tr>
+        <tr>
+            <td id="error"></td>
         </tr>
     </table>
     <div id="result"></div>
@@ -31,21 +35,38 @@
         let nhap_vao = parseFloat(document.getElementById("inp").value);
         let sl1 = document.getElementById("sl1").value;
         let sl2 = document.getElementById("sl2").value;
-        if(sl1==sl2){
-            if(sl1=='VND'){
-                document.getElementById("result").innerHTML= nhap_vao.toLocaleString('vi', {sytle: 'currency'}) + ' Đ';
-            }else{
-                document.getElementById("result").innerHTML= nhap_vao.toLocaleString('vi', {sytle: 'currency'}) + ' $'
-            }
+        if(nhap_vao <0){
+            document.getElementById("error").innerHTML="bạn phải nhập số tiền lớn hơn 0!"
         }else{
-            if(sl1=='VND'){
-                document.getElementById("result").innerHTML= (nhap_vao/23000).toLocaleString('vi', {sytle: 'currency'})+ ' $'
+            if(sl1 == "VND" && nhap_vao >1000000000 ){
+                document.getElementById("error").innerHTML="Bạn phải nhập tiền VNĐ nhỏ hơn 1 tỷ";
             }
             else{
-                document.getElementById("result").innerHTML= (nhap_vao*23000).toLocaleString('vi', {sytle: 'currency'})+' Đ'
+                if(sl1 == "USD" && nhap_vao >1000000 ){
+                    document.getElementById("error").innerHTML="Bạn phải nhập tiền USD nhỏ hơn 1 triệu ";
+                }
+                else{
+                    if(sl1==sl2){
+                        if(sl1=='VND'){
+                            document.getElementById("result").innerHTML= nhap_vao.toLocaleString('vi', {sytle: 'currency'}) + ' Đ';
+                        }else{
+                            document.getElementById("result").innerHTML= nhap_vao.toLocaleString('vi', {sytle: 'currency'}) + ' $'
+                        }
+                    }else{
+                        if(sl1=='VND'){
+                            document.getElementById("result").innerHTML= (nhap_vao/23000).toLocaleString('vi', {sytle: 'currency'})+ ' $'
+                        }
+                        else{
+                            document.getElementById("result").innerHTML= (nhap_vao*23000).toLocaleString('vi', {sytle: 'currency'})+' Đ'
+                        }
+
+                    }
+                    document.getElementById("error").innerHTML="";
+                }
             }
         }
     })
+
 
 </script>
 </body>
