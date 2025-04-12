@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DIEUKIEN1</title>
+    <style>
+        hr{
+            width: 500px;
+            margin: 0;
+        }
+        .tonhat{
+            width: 600px;
+            background-color: lightblue;
+            margin: 100px auto;
+            padding: 20px;
+        }
+        .tb1{
+            width: 550px;
+            background-color:burlywood;
+        }
+    </style>
+</head>
+<body>
+<!--html kiểm tra a có chia hết cho b không -->
+
+<table class="tb1">
+    <tr>
+        <td>Số A</td>
+        <td>Số B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="soa" maxlength="10" step="1"></td>
+        <td><input type="text" id="sob" maxlength="10" step="1"></td>
+        <td><button type="submit" id="btnkiemtra">Kiểm tra</button></td>
+    </tr>
+    <tr>
+        <td id="checkvarA"></td>
+        <td id="checkvarB"></td>
+    </tr>
+</table>
+<div id="result"></div>
+<br>
+<hr>
+<br>
+<!--html kiểm tra có đủ tuổi chưa -->
+<p>Nhập tuổi</p><input type="text" id="old" maxlength="3" step="1">
+<button>Kiểm tra</button>
+<p id="checkold"></p>
+<div id="resultold"></div>
+<br>
+<hr>
+<br>
+<!--html kiểm tra với 0 -->
+<p>Nhập số nguyên: </p>
+<input type="number" id="integer">
+<button >Kiểm tra</button>
+<p id="checkinteger"></p>
+<div id="resultinteger"></div>
+<br>
+<hr>
+<br>
+<!--html tìm số lớn nhất trong a,b,c -->
+<table>
+    <tr>
+        <th>Nhập A</th>
+        <th>Nhập B</th>
+        <th>Nhập C</th>
+    </tr>
+    <tr>
+        <td><input data-name="A" targetid="checka" type="text" class="abc" maxlength="5" step="1"></td>
+        <td><input data-name="B" targetid="checkb" type="text" class="abc"  maxlength="5" step="1"></td>
+        <td><input data-name="C" targetid="checkc" type="text" class="abc" maxlength="5" step="1"></td>
+    </tr>
+    <tr>
+        <td id="checka"></td>
+        <td id="checkb"></td>
+        <td id="checkc"></td>
+    </tr>
+    <tr>
+        <td><button id="btnresultmax">Số lớn nhất là:</button><span style="margin-left: 15px" id="resultmax"></span></td>
+    </tr>
+</table>
+<br>
+<hr>
+<br>
+<table>
+    <tr>
+        <th>Nhập điểm kiểm tra</th>
+        <th>Nhập điểm giữa kì</th>
+        <th>Nhập điểm cuối kì</th>
+    </tr>
+    <tr>
+        <td><input name="diemone"  targetiddiem="checkone" type="text" class="diem" maxlength="5" step="0.1"></td>
+        <td><input name="diemtwo" targetiddiem="checktwo" type="text" class="diem"  maxlength="5" step="0.1"></td>
+        <td><input name="diemthree" targetiddiem="checkthree" type="text" class="diem" maxlength="5" step="0.1"></td>
+    </tr>
+    <tr>
+        <td id="checkone"></td>
+        <td id="checktwo"></td>
+        <td id="checkthree"></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td><button id="btnresultdiem">Điểm số của bạn la:</button></td>
+        <td style="margin-left: 15px" id="resultdiem"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td id="resultavg"></td>
+    </tr>
+</table>
+<script>
+    // kiem tra a co chia het cho b khong
+    document.getElementById("soa").addEventListener("blur", function () {
+        let soa = document.getElementById("soa").value;
+
+        if (!Number(soa)) {
+            document.getElementById("checkvarA").innerHTML = "Làm ơn hãy nhập a là số";
+        } else {
+            document.getElementById("checkvarA").innerHTML = "";
+        }
+    })
+    document.getElementById("sob").addEventListener("blur", function () {
+        let sob = document.getElementById("sob").value;
+            if (!Number(sob)) {
+                document.getElementById("checkvarB").innerHTML = "Làm ơn hãy nhập a là số";
+            }else{
+                document.getElementById("checkvarB").innerHTML = "";
+                document.getElementById("btnkiemtra").addEventListener("click", function () {
+                    let a=document.getElementById("soa").value;
+                    let b=document.getElementById("sob").value;
+                    if(a%b == 0){
+                        document.getElementById("result").innerHTML="Wow! thật trùng hợp A đã chia hết cho B";
+                    }else document.getElementById("result").innerHTML="Tiết quá! A không chia hết cho B rồi";
+                })
+            }
+        })
+    // kiểm tra co hoc lop 10 không
+    document.getElementById("old").addEventListener("blur", function () {
+        let old=document.getElementById("old").value;
+        if ((old <=0) || (!Number(old))) {
+            document.getElementById("checkold").innerHTML="Hãy đảm bảo tuổi lớn hơn 0, là chữ số";
+        }else{
+            document.getElementById("checkold").innerHTML="";
+            if((old >= 15) && (old <= 19)){
+                document.getElementById("resultold").innerHTML="Chúc mừng bạn đã dậy thì";
+            }else document.getElementById("resultold").innerHTML="Tôi mong bạn sẽ dậy thì thành công";
+        }
+    })
+    // so sanh voi 0
+    document.getElementById("integer").addEventListener("blur", function () {
+        let integer= +document.getElementById("integer").value;
+        if(integer > 1000000){
+            document.getElementById("checkinteger").innerHTML="Hãy nhập số nhỏ hơn";
+            document.getElementById("resultinteger").innerHTML="";
+        }else{
+            document.getElementById("checkinteger").innerHTML="";
+            if(integer >0){
+                document.getElementById("resultinteger").innerHTML= integer+ " là số nguyên lớn hơn 0";
+            }else{
+                if(integer == 0){
+                    document.getElementById("resultinteger").innerHTML="bằng 0";
+                }else document.getElementById("resultinteger").innerHTML=integer+" là số nguyên bé hơn 0";
+            }
+        }
+    })
+// max A,B,C
+    let abc=document.getElementsByClassName("abc");
+    for (let i = 0; i < abc.length; i++) {
+        abc[i].addEventListener("blur", function (e) {
+            let abcValue = e.target.value;
+            if (!Number(abcValue)) {
+                let targetId = e.target.getAttribute("targetid");
+                document.getElementById(targetId).innerHTML = "Phải nhập gia tri là số";
+            }
+        })
+    }
+    document.getElementById("btnresultmax").addEventListener("click", function () {
+        let maxabc=0;
+        let vitri="";
+        for (let i = 0; i < abc.length; i++) {
+            if(maxabc<abc[i].value){
+                maxabc=abc[i].value;
+                vitri= abc[i].getAttribute("data-name");
+            }
+        }
+        document.getElementById("resultmax").innerHTML = vitri +" = "+maxabc;
+    })
+    let diem=document.getElementsByClassName("diem");
+    for (let i = 0; i < diem.length; i++) {
+        diem[i].addEventListener("blur", function (e) {
+            let targetIdDiem= e.target.getAttribute("targetiddiem");
+            let diemValue = e.target.value;
+            if (!Number(diemValue) || diemValue < 0 || diemValue > 10) {
+
+                document.getElementById(targetIdDiem).innerHTML = "Bạn phải nhập điểm >0,<10,là số";
+            }else{
+                document.getElementById(targetIdDiem).innerHTML="";
+            }
+        })
+    }
+    document.getElementById("btnresultdiem").addEventListener("click", function (e) {
+        let diemone = parseFloat(document.querySelector("[name='diemone']").value);
+        let diemtwo = parseFloat(document.querySelector("[name='diemtwo']").value);
+        let diemthree = parseFloat(document.querySelector("[name='diemthree']").value);
+        let avg=(diemone*0.2 + diemtwo*0.3 + diemthree*0.5);
+        document.getElementById("resultdiem").innerHTML = "Điểm trung binh là : " + avg.toFixed(2);
+        if(+avg>=8) {
+            document.getElementById("resultavg").innerHTML = "Học sinh giỏi";
+        }
+        else{
+            if(+avg >= 6.5){
+                document.getElementById("resultavg").innerHTML = "Học sinh khá";
+            }else{
+                if(+avg >= 5){
+                    document.getElementById("resultavg").innerHTML = "Học sinh trung bình";
+                }
+                else{
+                    if(+avg >= 3.5){
+                        document.getElementById("resultavg").innerHTML = "Học sinh yếu";
+                    }else document.getElementById("resultavg").innerHTML = "Học sinh kém";
+                }
+            }
+        }
+    })
+
+</script>
+</body>
+</html>
