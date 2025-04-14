@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    hr{
+      width: 500px;
+      margin: 0;
+    }
+    .tonhat{
+      width: 600px;
+      background-color: lightblue;
+      margin: 100px auto;
+      padding: 20px;
+    }
+    .tb1{
+      font-size: 10px;
+      color: red;
+    }
+    H3{
+      color: orange;
+      text-align: center;
+      margin-top: 0px;
+    }
+  </style>
+</head>
+<body>
+<div class="tonhat">
+    <h3>DIỆN TÍCH HÌNH VUÔNG</h3>
+    <label>Nhập cạnh hình vuông</label>
+    <label><input type="text" id="square-edge"></label>
+    <label><button id="btn-carculator-square">Diện tích hình vuông là:</button></label>
+    <label id="result-square"></label>
+    <p id="error-square-edge" class="tb1"></p>
+<br>
+<hr>
+<br>
+  <H3>DIỆN TÍCH HÌNH CHỮ NHẬT</H3>
+  <table>
+    <tr>
+      <td >Nhập chiều dài</td>
+      <td></td>
+      <td >Nhập chiều rộng</td>
+    </tr>
+    <tr>
+      <td><input type="text" id="long-edge"></td>
+      <th>X</th>
+      <td><input type="text" id="short-edge"></td>
+      <td><button id="btn-carculator-rectangle">Diện tích chữ nhật là : </button></td>
+      <td id="result-rectangle"></td>
+    </tr>
+    <tr>
+      <td id="error-long-edge" class="tb1"></td>
+      <td></td>
+      <td id="error-short-edge"></td>
+    </tr>
+  </table>
+<br>
+<hr>
+<br>
+  <H3>DIỆN TÍCH TAM GIÁC</H3>
+<table>
+  <tr>
+    <td>Cạnh góc vuông 1</td>
+    <td>Cạnh góc vuông 2</td>
+  </tr>
+  <tr>
+    <td><input type="text" id="triangle-edge-one"></td>
+    <td><input type="text" id="triangle-edge-two"></td>
+    <td><button id="btn-carculator-triangle">Diện tích tam giác là:</button></td>
+    <td id="result-triangle"></td>
+  </tr>
+  <tr>
+    <td id="error-edge-one" class="tb1"></td>
+    <td id="error-edge-two" class="tb1"></td>
+  </tr>
+  </table>
+<br>
+<hr>
+<br>
+  <H3>PHƯƠNG TRÌNH BẬC NHẤT</H3>
+    <table>
+      <tr>
+        <td><input type="number" id="input-a"></td>
+        <td><input type="number" id="input-b"></td>
+      </tr>
+      <tr>
+        <td id="error-a"></td>
+        <td id="error-b"></td>
+      </tr>
+      <tr>
+        <td><button id="btn-carculator-price">Nghiêm của phương trình ax + b = 0 là: </button></td>
+        <td id="result-method"></td>
+      </tr>
+      </table>
+    <br>
+    <hr>
+    <br>
+  <H3>PHƯƠNG TRÌNH BẬC 2</H3>
+    <table>
+      <tr>
+        <th>Nhập A</th>
+        <th>Nhập B </th>
+        <th>Nhập C</th>
+      </tr>
+      <tr>
+        <td><input type="number" id="number-a"></td>
+        <td><input type="number" id="number-b"></td>
+        <td><input type="number" id="number-c"></td>
+      </tr>
+      <tr>
+        <td id="error-number-a"></td>
+        <td id="error-number-b"></td>
+        <td id="error-number-c"></td>
+      </tr>
+
+    </table>
+    <button id="btn-lv2">check</button>
+    <lable id="result-lv2"></lable>
+<br>
+<hr>
+<br>
+  <H3>KIỂM TRA TUỔI CON NGƯỜI</H3>
+    <p>Nhập tuổi</p>
+    <input type="text" id="old-people">
+    <label><button id="check-old">Check</button></label>
+    <p id="error-old"></p>
+    <p id="result-old"></p>
+<br>
+<hr>
+<br>
+  <H3>KIỂM TRA CÓ PHẢI CẠNH CỦA TAM GIÁC</H3>
+    <table>
+      <tr>
+        <td>Nhập cạnh a</td>
+        <td>Nhập cạnh b</td>
+        <td>Nhập cạnh c</td>
+      </tr>
+      <tr>
+        <td><input type="text" id="triangle-a"></td>
+        <td><input type="text" id="triangle-b"></td>
+        <td><input type="text" id="triangle-c"></td>
+      </tr>
+      <tr>
+        <td id="error-triangle-a"></td>
+        <td id="error-triangle-b"></td>
+        <td id="error-triangle-c"></td>
+      </tr>
+    </table>
+    <button id="check-triangle">check</button>
+    <label id="result-check"></label>
+<br>
+<br>
+<hr>
+<br>
+  <H3>ĐIỆN NĂNG TIÊU THỤ</H3>
+  <p>Điện năng đã tiêu thụ</p><input type="text" id="electricity-consumend">
+    <button id="btn-carculator-money">Tính</button>
+    <p id="error-elec-cons"></p>
+    <p id="result-money"></p>
+<br>
+<hr>
+<br>
+  <H3>LÃI SUẤT</H3>
+    <table>
+      <tr>
+        <td>Số tiền ban đầu</td>
+        <td>Lãi suất</td>
+        <td>Số tháng</td>
+      </tr>
+      <tr>
+        <td><input type="number" id="money-first"></td>
+        <td><input type="number" id="interest-rate" step="0.01"></td>
+        <td><input type="number" id="month"></td>
+      </tr>
+      <tr>
+        <td id="error-money-first"></td>
+        <td id="error-interest"></td>
+        <td id="error-month"></td>
+      </tr>
+    </table>
+    <button id="btn-carculator-interest">Tính lãi: </button><label id="result-interest"></label>
+</div>
+  <script>
+    // lãi suất
+    document.getElementById("money-first").addEventListener("blur", function () {
+      let moneyFirst=document.getElementById("money-first").value;
+      if(moneyFirst <0 || moneyFirst > 10e10) {
+        document.getElementById("error-money-first").innerHTML = "hãy nhập lớn hơn 0 và bé hơn 10^10";
+      }else document.getElementById("error-money-first").innerHTML = "";
+    })
+    document.getElementById("interest-rate").addEventListener("blur", function () {
+      let interestRate=document.getElementById("interest-rate").value;
+      if(interestRate <0 || moneyFirst > 1) {
+        document.getElementById("error-interest").innerHTML = "hãy nhập lớn hơn 0 và bé hơn 100%";
+      }else document.getElementById("error-interest").innerHTML = "";
+    })
+    document.getElementById("month").addEventListener("blur", function () {
+      let month=document.getElementById("month").value;
+      if(month <0 || month > 1000) {
+        document.getElementById("error-month").innerHTML = "hãy nhập lớn hơn 0 và bé hơn 13";
+      }else document.getElementById("error-month").innerHTML = "";
+    })
+    document.getElementById("btn-carculator-interest").addEventListener("click", function () {
+      let moneyFirst=parseFloat(document.getElementById("money-first").value);
+      let month=parseFloat(document.getElementById("month").value) ;
+      let interestRate=parseFloat(document.getElementById("interest-rate").value) ;
+      let result=parseFloat(moneyFirst*Math.pow(1+interestRate/12,month));
+      document.getElementById("result-interest").innerHTML =result.toLocaleString('vi', {sytle:'currency'})+"VNĐ";
+    })
+    //điện năng tiêu thụ
+    document.getElementById("electricity-consumend").addEventListener("blur", function () {
+      let elecConsumed = document.getElementById("electricity-consumend").value;
+      if(elecConsumed >10000|| elecConsumed < 0|| !Number(elecConsumed)){
+        document.getElementById("error-elec-cons").innerHTML="Bạn phải nhập điên năng tiêu thụ >0,<10000,là chữ số"
+      }else{
+        document.getElementById("error-elec-cons").innerHTML="";
+      }
+    })
+    document.getElementById("btn-carculator-money").addEventListener("click", function () {
+      let elecConsumed = document.getElementById("electricity-consumend").value;
+      if(elecConsumed <=50){
+        document.getElementById("result-money").innerHTML=(elecConsumed*1806).toFixed(2)+"đồng/kWh";
+      }else{
+        if(elecConsumed <=100){
+          document.getElementById("result-money").innerHTML=(elecConsumed*1866).toFixed(2)+"đồng/kWh";
+        }else{
+          if(elecConsumed <=200){
+            document.getElementById("result-money").innerHTML=(elecConsumed*2167).toFixed(2)+"đồng/kWh";
+        }else{
+          if(elecConsumed <=300){
+            document.getElementById("result-money").innerHTML=(elecConsumed*2729).toFixed(2)+"đồng/kWh";
+            }else{
+              if(elecConsumed <=400){
+              document.getElementById("result-money").innerHTML=(elecConsumed*3050).toFixed(2)+"đồng/kWh";
+              }else{
+              document.getElementById("result-money").innerHTML=(elecConsumed*3151).toFixed(2)+"đồng/kWh";
+              }
+            }
+          }
+        }
+      }
+    })
+    //cạnh tam giác
+    document.getElementById("triangle-a").addEventListener("blur", function () {
+      let triangleA = parseFloat(document.getElementById("triangle-a").value);
+      if(!Number(triangleA) || triangleA <0|| triangleA > 10000){
+        document.getElementById("error-triangle-a").innerHTML = "Hãy nhập cạnh a là số,>0,<10000";
+      }else{
+        document.getElementById("error-triangle-a").innerHTML = "";
+      }
+    })
+    document.getElementById("triangle-b").addEventListener("blur", function () {
+      let triangleB = parseFloat(document.getElementById("triangle-b").value);
+      if(!Number(triangleB) || triangleB <0|| triangleB > 10000){
+        document.getElementById("error-triangle-b").innerHTML = "Hãy nhập cạnh a là số,>0,<10000";
+      }else{
+        document.getElementById("error-triangle-b").innerHTML = "";
+      }
+    })
+    document.getElementById("triangle-c").addEventListener("blur", function () {
+      let triangleC = parseFloat(document.getElementById("triangle-c").value);
+      if(!Number(triangleC) || triangleC <0|| triangleC > 10000){
+        document.getElementById("error-triangle-b").innerHTML = "Hãy nhập cạnh a là số,>0,<10000";
+      }else{
+        document.getElementById("error-triangle-b").innerHTML = "";
+      }
+    })
+    document.getElementById("check-triangle").addEventListener("click", function () {
+      let triangleA = parseFloat(document.getElementById("triangle-a").value);
+      let triangleB = parseFloat(document.getElementById("triangle-b").value);
+      let triangleC = parseFloat(document.getElementById("triangle-c").value);
+      if(triangleA +triangleB > triangleC && triangleA+triangleC > triangleB && triangleC+triangleB > triangleA) {
+        document.getElementById("result-check").innerHTML = "A,B,C là 3 cạnh của tam giác";
+      }else document.getElementById("result-check").innerHTML = "A,B,C không phải là cạnh của tam giác";
+    })
+    //kiem tra con người
+    document.getElementById("old-people").addEventListener("blur", function () {
+      let oldPeople = document.getElementById("old-people").value;
+      if(!Number(oldPeople)|| oldPeople < 0 || oldPeople > 1000){
+        document.getElementById("error-old").innerHTML = "Hãy nhập là chữ số, >0,<1000";
+      }else{
+        document.getElementById("error-old").innerHTML = "";
+        document.getElementById("check-old").addEventListener("click", function () {
+          if(oldPeople > 120){
+            document.getElementById("result-old").innerHTML = "Bạn đã hoá thần";
+          }else{
+            document.getElementById("result-old").innerHTML = "Bạn còn là phàm nhân";
+          }
+        })
+      }
+    })
+    // phuong trinh bac 2
+    document.getElementById("number-a").addEventListener("blur", function () {
+      let numberA = document.getElementById("number-a").value;
+      if (numberA > 10000 || numberA < -10000) {
+        document.getElementById("error-number-a").innerHTML="hãy nhập a >-10000,<10000"
+      }else{
+        document.getElementById("error-number-a").innerHTML="";
+      }
+    })
+    document.getElementById("number-b").addEventListener("blur", function () {
+      let numberB = document.getElementById("number-b").value;
+      if (numberB > 10000 || numberB < -10000) {
+        document.getElementById("error-number-b").innerHTML="hãy nhập a >-10000,<10000"
+      }else{
+        document.getElementById("error-number-b").innerHTML="";
+      }
+    })
+    document.getElementById("number-c").addEventListener("blur", function () {
+      let numberC = document.getElementById("number-c").value;
+      if (numberC > 10000 || numberC < -10000) {
+        document.getElementById("error-number-c").innerHTML="hãy nhập a >-10000,<10000"
+      }else{
+        document.getElementById("error-number-c").innerHTML="";
+      }
+    })
+    document.getElementById("btn-lv2").addEventListener("click", function () {
+      let numberA = parseFloat(document.getElementById("number-a").value);
+      let numberB = parseFloat(document.getElementById("number-b").value);
+      let numberC = parseFloat(document.getElementById("number-c").value);
+      if(numberA == 0){
+        if(numberB == 0){
+          if(numberC == 0){
+            document.getElementById("result-lv2").innerHTML = "Phương trình vô số nghiệm";
+          }else{
+            document.getElementById("result-lv2").innerHTML = "Phương trình vô nghiệm";
+          }
+        }else{
+          document.getElementById("result-lv2").innerHTML =numberC/numberB;
+        }
+      }else{
+        let deta = parseFloat(numberB*numberB - (4*numberA*numberC));
+        if(deta == 0){
+          document.getElementById("result-lv2").innerHTML=" Phương trình có nghiệm kép là :"+ (-numberB/2*numberA).toFixed(2)
+        }else{
+          if(deta >0){
+            document.getElementById("result-lv2").innerHTML="Phương trình có 2 nghiệm phân biệt là: x1= "+ (-numberB+Math.sqrt(deta))/2*numberA.toFixed(2) + "x2= "+(-numberB-Math.sqrt(deta))/2*numberA.toFixed(2)
+          }else document.getElementById("result-lv2").innerHTML="Phương trinh vô nghiệm"
+        }
+
+      }
+    })
+    //phuong trinh bac 1
+    document.getElementById("input-a").addEventListener("blur", function () {
+      let inputA=parseFloat(document.getElementById("input-a").value);
+      if(inputA>10000 || inputA< -10000 ){
+        document.getElementById("error-a").innerHTML = "Hãy nhận a> -10000, <10000, là chữ số";
+      }else{
+        document.getElementById("error-a").innerHTML = "";
+      }
+    })
+    document.getElementById("input-b").addEventListener("blur", function () {
+      let inputB=parseFloat(document.getElementById("input-b").value);
+      if(inputB>10000 || inputB<-10000){
+        document.getElementById("error-b").innerHTML = "Hãy nhập b> -10000, <10000, là chữ số";
+      }else{
+        document.getElementById("error-b").innerHTML = "";
+      }
+    })
+    document.getElementById("btn-carculator-price").addEventListener("click", function () {
+      let inputA=parseFloat(document.getElementById("input-a").value);
+      let inputB=parseFloat(document.getElementById("input-b").value);
+      if(inputA == 0){
+        if(inputB == 0){
+          document.getElementById("result-method").innerHTML = "Phương trình vô số nghiệm";
+        }else{
+          document.getElementById("result-method").innerHTML = "Phương trình vô nghiệm";
+        }
+      }else{
+        document.getElementById("result-method").innerHTML =inputB/inputA.toString();
+      }
+    })
+    //hinh vuong
+    document.getElementById("square-edge").addEventListener("blur", function () {
+      let squareEdge = parseFloat(document.getElementById("square-edge").value);
+      if (squareEdge < 0 || squareEdge > 1000 || !Number(squareEdge)) {
+        document.getElementById("error-square-edge").innerHTML = "Cạnh hình vuông phải lớn hơn 0,<1000,và là số";
+      }else document.getElementById("error-square-edge").innerHTML = "";
+    })
+    document.getElementById("btn-carculator-square").addEventListener("click", function () {
+      let squareEdge = parseFloat(document.getElementById("square-edge").value);
+      let squareAcreage = parseFloat(squareEdge*squareEdge);
+      document.getElementById("result-square").innerHTML = squareAcreage.toString();
+    })
+    //hinh chu nhat
+    document.getElementById("long-edge").addEventListener("blur", function () {
+      let longEdge = parseFloat(document.getElementById("long-edge").value);
+      if( longEdge < 0 || longEdge > 1000 || !Number(longEdge)) {
+        document.getElementById("error-long-edge").innerHTML="canh >0,<1000, là chữ số"
+      }else document.getElementById("error-long-edge").innerHTML = "";
+    })
+    document.getElementById("short-edge").addEventListener("blur", function () {
+      let shortEdge = parseFloat(document.getElementById("short-edge").value);
+      if( shortEdge < 0 || shortEdge > 1000 || !Number(shortEdge)) {
+        document.getElementById("error-short-edge").innerHTML="canh >0,<1000, là chữ số"
+      }else document.getElementById("error-short-edge").innerHTML = "";
+    })
+    document.getElementById("btn-carculator-rectangle").addEventListener("click", function () {
+      let shortEdge = parseFloat(document.getElementById("short-edge").value);
+      let longEdge = parseFloat(document.getElementById("long-edge").value);
+      let rectangleArea = parseFloat(shortEdge*longEdge);
+      document.getElementById("result-rectangle").innerHTML = rectangleArea.toFixed();
+    })
+    //hinh tam giác
+    document.getElementById("triangle-edge-one").addEventListener("blur", function () {
+      let triangleEdgeOne = parseFloat(document.getElementById("triangle-edge-one").value);
+      if(triangleEdgeOne<0 || triangleEdgeOne> 1000 || !Number(triangleEdgeOne)) {
+        document.getElementById("error-edge-one").innerHTML="cạnh tam giác phải >0,<1000,là chữ số" ;
+      }else{
+        document.getElementById("error-edge-one").innerHTML="";
+      }
+    })
+    document.getElementById("triangle-edge-two").addEventListener("blur", function () {
+      let triangleEdgeTwo = parseFloat(document.getElementById("triangle-edge-two").value);
+      if(triangleEdgeTwo<0 || triangleEdgeTwo> 1000 || !Number(triangleEdgeTwo)) {
+        document.getElementById("error-edge-two").innerHTML="cạnh tam giác phải >0,<1000,là chữ số"
+      }else{
+        document.getElementById("error-edge-two").innerHTML="";
+      }
+    })
+    document.getElementById("btn-carculator-triangle").addEventListener("click", function () {
+      let triangleEdgeOne = parseFloat(document.getElementById("triangle-edge-one").value);
+      let triangleEdgeTwo = parseFloat(document.getElementById("triangle-edge-two").value);
+      let triangleArea = parseFloat(triangleEdgeOne*triangleEdgeTwo);
+      document.getElementById("result-triangle").innerHTML = triangleArea.toFixed(2);
+    })
+  </script>
+</body>
+</html>

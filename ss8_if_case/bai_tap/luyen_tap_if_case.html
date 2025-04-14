@@ -298,7 +298,7 @@ document.getElementById("id-ban-hang").addEventListener("blur", function () {
         document.getElementById("error-doanh-so").innerHTML="";
         document.getElementById("btn-hoa-hong").addEventListener("click", function () {
             let hoaHong = parseFloat(doanhSo*0.05);
-            document.getElementById("result-hoa-hong").innerHTML = hoaHong.toFixed(2) +" VNĐ";
+            document.getElementById("result-hoa-hong").innerHTML = hoaHong.toFixed() +" VNĐ";
         })
     }
 })
