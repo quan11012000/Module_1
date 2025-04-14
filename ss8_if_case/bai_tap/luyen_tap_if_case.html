@@ -32,13 +32,13 @@
             <td></td>
         </tr>
         <tr>
-            <td><input type="text" id="soa" maxlength="10" step="1"></td>
-            <td><input type="text" id="sob" maxlength="10" step="1"></td>
-            <td><button type="submit" id="btnkiemtra">Kiểm tra</button></td>
+            <td><input type="text" id="soA" maxlength="10" step="1"></td>
+            <td><input type="text" id="soB" maxlength="10" step="1"></td>
+            <td><button type="submit" id="btn-check">Kiểm tra</button></td>
         </tr>
         <tr>
-            <td id="checkvarA" class="tb1"></td>
-            <td id="checkvarB" class="tb1"></td>
+            <td id="error-a" class="tb1"></td>
+            <td id="error-b" class="tb1"></td>
         </tr>
     </table>
     <div id="result"></div>
@@ -49,22 +49,21 @@
     <p STYLE="text-align: center">KIỂM TRA ĐIỀU KIỆN LỚP 10</p>
     <LABEL style="margin-right:10px;">Nhập tuổi</LABEL><input type="text" id="old" maxlength="3" step="1">
     <button>Kiểm tra</button>
-    <p id="checkold" class="tb1"></p>
-    <div id="resultold"></div>
+    <p id="error-old" class="tb1"></p>
+    <div id="result-old"></div>
     <br>
     <hr>
     <br>
     <!--html kiểm tra với 0 -->
     <p STYLE="text-align: center">KIỂM TRA ĐIỀU KIỆN LỚP 10</p>
     <p>Nhập số nguyên: </p>
-    <input type="number" id="integer">
+    <input type="text" id="integer">
     <button >Kiểm tra</button>
-    <p id="checkinteger" class="tb1"></p>
-    <div id="resultinteger"></div>
+    <p id="error-integer" class="tb1"></p>
+    <div id="result-integer"></div>
     <br>
     <hr>
     <br>
-    <
     <!--html tìm số lớn nhất trong a,b,c -->
     <p STYLE="text-align: center">TÌM SỐ LỚN NHẤT </p>
     <table>
@@ -74,17 +73,17 @@
             <th>Nhập C</th>
         </tr>
         <tr>
-            <td><input data-name="A" targetid="checka" type="text" class="abc" maxlength="5" step="1"></td>
-            <td><input data-name="B" targetid="checkb" type="text" class="abc"  maxlength="5" step="1"></td>
-            <td><input data-name="C" targetid="checkc" type="text" class="abc" maxlength="5" step="1"></td>
+            <td><input data-name="A" target-id="check-a" type="text" class="abc" maxlength="5" step="1"></td>
+            <td><input data-name="B" target-id="check-b" type="text" class="abc"  maxlength="5" step="1"></td>
+            <td><input data-name="C" target-id="check-c" type="text" class="abc" maxlength="5" step="1"></td>
         </tr>
         <tr>
-            <td id="checka" class="tb1"></td>
-            <td id="checkb" class="tb1"></td>
-            <td id="checkc" class="tb1"></td>
+            <td id="check-a" class="tb1"></td>
+            <td id="check-b" class="tb1"></td>
+            <td id="check-c" class="tb1"></td>
         </tr>
         <tr>
-            <td><button id="btnresultmax">Số lớn nhất là:</button><span style="margin-left: 15px" id="resultmax"></span></td>
+            <td><button id="btn-max">Số lớn nhất là:</button><span style="margin-left: 15px" id="result-max"></span></td>
         </tr>
     </table>
     <br>
@@ -98,24 +97,24 @@
             <th>Nhập điểm cuối kì</th>
         </tr>
         <tr>
-            <td><input name="diemone"  targetiddiem="checkone" type="text" class="diem" maxlength="5" step="0.1"></td>
-            <td><input name="diemtwo" targetiddiem="checktwo" type="text" class="diem"  maxlength="5" step="0.1"></td>
-            <td><input name="diemthree" targetiddiem="checkthree" type="text" class="diem" maxlength="5" step="0.1"></td>
+            <td><input name="scoresA"  target-id-scores="check-one" type="text" class="scores" maxlength="5" step="0.1"></td>
+            <td><input name="scoresB" target-id-scores="check-two" type="text" class="scores"  maxlength="5" step="0.1"></td>
+            <td><input name="scoresC" target-id-scores="check-three" type="text" class="scores" maxlength="5" step="0.1"></td>
         </tr>
         <tr>
-            <td id="checkone" class="tb1"></td>
-            <td id="checktwo" class="tb1"></td>
-            <td id="checkthree" class="tb1"></td>
+            <td id="check-one" class="tb1"></td>
+            <td id="check-two" class="tb1"></td>
+            <td id="check-three" class="tb1"></td>
         </tr>
     </table>
     <table>
         <tr>
-            <td><button id="btnresultdiem">Điểm số của bạn là:</button></td>
-            <td style="margin-left: 15px" id="resultdiem"></td>
+            <td><button id="btn-scores">Điểm số của bạn là:</button></td>
+            <td style="margin-left: 15px" id="result-scores"></td>
         </tr>
         <tr>
             <td></td>
-            <td id="resultavg"></td>
+            <td id="result-avg"></td>
         </tr>
     </table>
 <br>
@@ -125,14 +124,14 @@
     <table>
         <tr>
             <td>Nhập doanh số bán hàng</td>
-            <td><input type="text" id="doanhsobanhang"></td>
+            <td><input type="text" id="id-ban-hang"></td>
         </tr>
         <tr>
-            <td id="checkdoanhso" class="tb1"></td>
+            <td id="error-doanh-so" class="tb1"></td>
         </tr>
         <tr>
-            <td><button id="btnhoahong">% hoa hồng là:</button></td>
-            <td id="resulthoahong"> </td>
+            <td><button id="btn-hoa-hong">% hoa hồng là:</button></td>
+            <td id="result-hoa-hong"> </td>
         </tr>
     </table>
 <br>
@@ -142,14 +141,14 @@
     <table>
         <tr>
             <td>Nhập số tiền điện thoại</td>
-            <td><input type="text" id="tiendienthoai"></td>
+            <td><input type="text" id="money-phone"></td>
         </tr>
         <tr>
-            <td id="checktiendienthoai" class="tb1"></td>
+            <td id="error-money-phone" class="tb1"></td>
         </tr>
         <tr>
-            <td><button id="btncuocdienthoai">Cước điện thoại</button></td>
-            <td id="resultcuocdienthoai"></td>
+            <td><button id="btn-freight">Cước điện thoại</button></td>
+            <td id="result-freight"></td>
         </tr>
     </table>
 <br>
@@ -163,38 +162,38 @@
         </tr>
 
         <tr>
-            <td><input type="text" id="idheight"></td>
-            <td><input type="text" id="idweight"></td>
-            <td><button id="btnBMI">Tính BMI</button></td>
-            <td id="resultBMI"></td>
+            <td><input type="text" id="id-height"></td>
+            <td><input type="text" id="id-weight"></td>
+            <td><button id="btn-bmi">Tính BMI</button></td>
+            <td id="result-bmi"></td>
         </tr>
         <tr>
-            <td id="checkheight" class="tb1"></td>
-            <td id="checkweight" class="tb1"></td>
+            <td id="error-height" class="tb1"></td>
+            <td id="error-weight" class="tb1"></td>
         </tr>
     </table>
 </div>
 
 <script>
     // kiem tra a co chia het cho b khong
-    document.getElementById("soa").addEventListener("blur", function () {
-        let soa = document.getElementById("soa").value;
+    document.getElementById("soA").addEventListener("blur", function () {
+        let soA = document.getElementById("soA").value;
 
-        if (!Number(soa)) {
-            document.getElementById("checkvarA").innerHTML = "Làm ơn hãy nhập a là số";
+        if (!Number(soA)) {
+            document.getElementById("error-a").innerHTML = "Làm ơn hãy nhập a là số";
         } else {
-            document.getElementById("checkvarA").innerHTML = "";
+            document.getElementById("error-a").innerHTML = "";
         }
     })
-    document.getElementById("sob").addEventListener("blur", function () {
-        let sob = document.getElementById("sob").value;
-            if (!Number(sob)) {
-                document.getElementById("checkvarB").innerHTML = "Làm ơn hãy nhập a là số";
+    document.getElementById("soB").addEventListener("blur", function () {
+        let soB = document.getElementById("soB").value;
+            if (!Number(soB)) {
+                document.getElementById("error-b").innerHTML = "Làm ơn hãy nhập a là số";
             }else{
-                document.getElementById("checkvarB").innerHTML = "";
-                document.getElementById("btnkiemtra").addEventListener("click", function () {
-                    let a=document.getElementById("soa").value;
-                    let b=document.getElementById("sob").value;
+                document.getElementById("error-b").innerHTML = "";
+                document.getElementById("btn-check").addEventListener("click", function () {
+                    let a=document.getElementById("soA").value;
+                    let b=document.getElementById("soB").value;
                     if(a%b == 0){
                         document.getElementById("result").innerHTML="Wow! thật trùng hợp A đã chia hết cho B";
                     }else document.getElementById("result").innerHTML="Tiết quá! A không chia hết cho B rồi";
@@ -204,61 +203,62 @@
     // kiểm tra co hoc lop 10 không
     document.getElementById("old").addEventListener("blur", function () {
         let old=document.getElementById("old").value;
-        if ((old <=0) || (!Number(old))) {
-            document.getElementById("checkold").innerHTML="Hãy đảm bảo tuổi lớn hơn 0, là chữ số";
+        if (old <=0 || !Number(old) || old>150) {
+            document.getElementById("error-old").innerHTML="Hãy đảm bảo tuổi > 0, < 150 , là chữ số";
         }else{
-            document.getElementById("checkold").innerHTML="";
+            document.getElementById("error-old").innerHTML="";
             if((old >= 15) && (old <= 19)){
-                document.getElementById("resultold").innerHTML="Chúc mừng bạn đã dậy thì";
-            }else document.getElementById("resultold").innerHTML="Tôi mong bạn sẽ dậy thì thành công";
+                document.getElementById("result-old").innerHTML="Chúc mừng bạn đã dậy thì";
+            }else document.getElementById("result-old").innerHTML="Tôi mong bạn sẽ dậy thì thành công";
         }
     })
     // so sanh voi 0
     document.getElementById("integer").addEventListener("blur", function () {
-        let integer= +document.getElementById("integer").value;
-        if(integer > 1000000){
-            document.getElementById("checkinteger").innerHTML="Hãy nhập số nhỏ hơn";
-            document.getElementById("resultinteger").innerHTML="";
-        }else{
-            document.getElementById("checkinteger").innerHTML="";
-            if(integer >0){
-                document.getElementById("resultinteger").innerHTML= integer+ " là số nguyên lớn hơn 0";
-            }else{
-                if(integer == 0){
-                    document.getElementById("resultinteger").innerHTML="bằng 0";
-                }else document.getElementById("resultinteger").innerHTML=integer+" là số nguyên bé hơn 0";
+        let integer = +document.getElementById("integer").value;
+        if (integer > 1000000 || !Number(integer)) {
+            document.getElementById("error-integer").innerHTML = "Hãy nhập số nhỏ hơn 1.000.000 và đảm bảo nó là số";
+            document.getElementById("result-integer").innerHTML = "";
+        } else {
+            document.getElementById("error-integer").innerHTML = "";
+            if (integer > 0) {
+                document.getElementById("result-integer").innerHTML = integer + " là số nguyên lớn hơn 0";
+            } else {
+                if (integer == 0) {
+                    document.getElementById("result-integer").innerHTML = "bằng 0";
+                } else document.getElementById("result-integer").innerHTML = integer + " là số nguyên bé hơn 0";
             }
         }
     })
+
 // max A,B,C
     let abc=document.getElementsByClassName("abc");
     for (let i = 0; i < abc.length; i++) {
         abc[i].addEventListener("blur", function (e) {
             let abcValue = e.target.value;
-            let targetId = e.target.getAttribute("targetid");
+            let targetId = e.target.getAttribute("target-id");
             if (!Number(abcValue)) {
 
                 document.getElementById(targetId).innerHTML = "Phải nhập gia tri là số";
             }
         })
     }
-    document.getElementById("btnresultmax").addEventListener("click", function () {
+    document.getElementById("btn-max").addEventListener("click", function () {
         let maxabc=0;
-        let vitri="";
+        let viTri="";
         for (let i = 0; i < abc.length; i++) {
             if(maxabc< parseFloat(abc[i].value)){
-                vitri= abc[i].getAttribute("data-name");
+                viTri= abc[i].getAttribute("data-name");
                 maxabc=parseFloat(abc[i].value);
             }
         }
-        document.getElementById("resultmax").innerHTML = vitri +" = "+maxabc;
+        document.getElementById("result-max").innerHTML = viTri +" = "+maxabc;
     })
-    let diem=document.getElementsByClassName("diem");
-    for (let i = 0; i < diem.length; i++) {
-        diem[i].addEventListener("blur", function (e) {
-            let targetIdDiem= e.target.getAttribute("targetiddiem");
-            let diemValue = e.target.value;
-            if (!Number(diemValue) || diemValue < 0 || diemValue > 10) {
+    let scores=document.getElementsByClassName("scores");
+    for (let i = 0; i < scores.length; i++) {
+        scores[i].addEventListener("blur", function (e) {
+            let targetIdDiem= e.target.getAttribute("target-id-scores");
+            let scoresValue = e.target.value;
+            if (!Number(scoresValue) || scoresValue < 0 || scoresValue > 10) {
 
                 document.getElementById(targetIdDiem).innerHTML = "Bạn phải nhập điểm >0,<10,là số";
             }else{
@@ -266,74 +266,77 @@
             }
         })
     }
-    document.getElementById("btnresultdiem").addEventListener("click", function (e) {
-        let diemone = parseFloat(document.querySelector("[name='diemone']").value);
-        let diemtwo = parseFloat(document.querySelector("[name='diemtwo']").value);
-        let diemthree = parseFloat(document.querySelector("[name='diemthree']").value);
-        let avg=(diemone*0.2 + diemtwo*0.3 + diemthree*0.5);
-        document.getElementById("resultdiem").innerHTML = "Điểm trung binh là : " + avg.toFixed(2);
+    document.getElementById("btn-scores").addEventListener("click", function (e) {
+        let scoresA = parseFloat(document.querySelector("[name='scoresA']").value);
+        let scoresB = parseFloat(document.querySelector("[name='scoresB']").value);
+        let scoresC = parseFloat(document.querySelector("[name='scoresC']").value);
+        let avg=(scoresA*0.2 + scoresB*0.3 + scoresC*0.5);
+        document.getElementById("result-scores").innerHTML = "Điểm trung binh là : " + avg.toFixed(2);
         if(+avg>=8) {
-            document.getElementById("resultavg").innerHTML = "Học sinh giỏi";
+            document.getElementById("result-avg").innerHTML = "Học sinh giỏi";
         }
         else{
             if(+avg >= 6.5){
-                document.getElementById("resultavg").innerHTML = "Học sinh khá";
+                document.getElementById("result-avg").innerHTML = "Học sinh khá";
             }else{
                 if(+avg >= 5){
-                    document.getElementById("resultavg").innerHTML = "Học sinh trung bình";
+                    document.getElementById("result-avg").innerHTML = "Học sinh trung bình";
                 }
                 else{
                     if(+avg >= 3.5){
-                        document.getElementById("resultavg").innerHTML = "Học sinh yếu";
-                    }else document.getElementById("resultavg").innerHTML = "Học sinh kém";
+                        document.getElementById("result-avg").innerHTML = "Học sinh yếu";
+                    }else document.getElementById("result-avg").innerHTML = "Học sinh kém";
                 }
             }
         }
     })
-document.getElementById("doanhsobanhang").addEventListener("blur", function () {
-    let doanhSo=document.getElementById("doanhsobanhang").value;
+document.getElementById("id-ban-hang").addEventListener("blur", function () {
+    let doanhSo=document.getElementById("id-ban-hang").value;
     if(doanhSo <0 || doanhSo >= 10000000000 || !Number(doanhSo)){
-        document.getElementById("checkdoanhso").innerHTML="Ban phai nhap doanh so>0, <10.000.000.000, la so";
+        document.getElementById("error-doanh-so").innerHTML="Ban phai nhap doanh so>0, <10.000.000.000, la so";
     }else{
-        document.getElementById("checkdoanhso").innerHTML="";
-        document.getElementById("btnhoahong").addEventListener("click", function () {
+        document.getElementById("error-doanh-so").innerHTML="";
+        document.getElementById("btn-hoa-hong").addEventListener("click", function () {
             let hoaHong = parseFloat(doanhSo*0.05);
-            document.getElementById("resulthoahong").innerHTML = hoaHong +" VNĐ";
+            document.getElementById("result-hoa-hong").innerHTML = hoaHong.toFixed(2) +" VNĐ";
         })
     }
 })
-document.getElementById("tiendienthoai").addEventListener("blur", function () {
-    let tienDienThoai=document.getElementById("tiendienthoai").value;
+document.getElementById("money-phone").addEventListener("blur", function () {
+    let tienDienThoai=document.getElementById("money-phone").value;
     if(tienDienThoai < 0 || tienDienThoai >= 1000000000|| !Number(tienDienThoai)){
-        document.getElementById("checktiendienthoai").innerHTML="Ban phai nhap tien dien thoai>0, <10.000.000.000, la so";
+        document.getElementById("error-money-phone").innerHTML="Ban phai nhap tien dien thoai>0, <10.000.000.000, la so";
     }else{
-        document.getElementById("checktiendienthoai").innerHTML="";
-        document.getElementById("btncuocdienthoai").addEventListener("click", function () {
+        document.getElementById("error-money-phone").innerHTML="";
+        document.getElementById("btn-freight").addEventListener("click", function () {
             let cuoc = parseFloat(tienDienThoai*0.02);
-            document.getElementById("resultcuocdienthoai").innerHTML = cuoc+" VNĐ";
+            document.getElementById("result-freight").innerHTML = cuoc+" VNĐ";
         })
     }
 })
-document.getElementById("idheight").addEventListener("blur", function () {
-    let height = parseFloat(document.getElementById("idheight").value);
-    if (height < 0 || height >= 2 || !Number(height)) {
-        document.getElementById("checkheight").innerHTML = "ban phai nhap chieu cao >0,<2m,la so";
+document.getElementById("id-height").addEventListener("blur", function () {
+    let height = parseFloat(document.getElementById("id-height").value);
+    if (height < 0 || height >= 3 || !Number(height)) {
+        document.getElementById("error-height").innerHTML = "ban phai nhap chieu cao >0,<3m,la so";
     } else {
-        document.getElementById("idweight").addEventListener("blur", function () {
-            document.getElementById("checkheight").innerHTML = "";
-            let weight = parseFloat(document.getElementById("idweight").value);
-            if (weight < 0 || weight >= 200 || !Number(weight)) {
-                document.getElementById("checkweight").innerHTML = "ban phai nhap can nang >0,<200kg,la so"
-            } else {
-                document.getElementById("checkweight").innerHTML = "";
-                document.getElementById("btnBMI").addEventListener("click", function () {
-                    let bmi = parseFloat(weight / (height * height));
-                    document.getElementById("resultBMI").innerHTML = bmi.toFixed(2);
-                })
-            }
-        })
+        document.getElementById("error-height").innerHTML = "";
     }
 })
+document.getElementById("id-weight").addEventListener("blur", function () {
+    let weight = parseFloat(document.getElementById("id-weight").value);
+    if (weight < 0 || weight >= 300 || !Number(weight)) {
+        document.getElementById("error-weight").innerHTML = "ban phai nhap chieu cao >0,<300kg,la so";
+    } else {
+        document.getElementById("error-weight").innerHTML = "";
+    }
+})
+document.getElementById("btn-bmi").addEventListener("click", function () {
+    let weight= parseFloat(document.getElementById("id-weight").value);
+    let height = parseFloat(document.getElementById("id-height").value);
+    let bmi = parseFloat(weight / (height * height));
+    document.getElementById("result-bmi").innerHTML = bmi.toFixed(2);
+})
+
 
 </script>
 </body>
