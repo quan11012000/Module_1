@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    td{
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+<h3 STYLE="text-align: center">BẢNG CỬU CHƯƠNG</h3>
+<table STYLE="text-align: center; margin-left: 26%"  >
+  <tbody id="bang-cuu-chuong"></tbody>
+</table>
+<script>
+  let bangCuuChuong = document.getElementById("bang-cuu-chuong");
+  let result="";
+  for (let i = 1; i <= 9; i++) {
+    result += "<tr>";
+    for (let j = 2; j <= 9; j++) {
+      result += `<td>${j} x ${i} = ${i*j}</td>`;
+    }
+    result += "</tr>";
+  }
+  bangCuuChuong.innerHTML = result;
+</script>
+</body>
+</html>
