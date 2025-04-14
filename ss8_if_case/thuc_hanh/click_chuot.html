@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="myImage"src="https://i1-vnexpress.vnecdn.net/2022/11/28/VNE-Cup-8664-1669628729.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=BtrkJ93AlrMhDd5DCnzCEw">
+    <p>Click button below to move the image to right</p>
+    <button type="button" value="Click me" onclick="moveRight();">Click Me</button>
+</form>
+<script>
+    let myImage = document.getElementById("myImage");
+    function init() {
+        myImage= document.getElementById("myImage");
+        myImage.style.position = "relative";
+        myImage.style.left = "0px";
+    }
+    function moveRight() {
+        myImage.style.left = parseInt(myImage.style.left) + 10 + "px";
+    }
+    window.onload = init;
+
+</script>
+</body>
+</html>
