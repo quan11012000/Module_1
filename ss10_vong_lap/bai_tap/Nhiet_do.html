@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let temperature = parseInt(prompt("Nhap nhiet do"));
+    while(true){
+      if(temperature<20 ){
+        temperature=parseInt(prompt("Tăng nhiệt độ lên cu"));
+        continue;
+      } else if(temperature>100 ){
+        temperature=parseInt(prompt("Giảm nhiệt độ cho anh cu"));
+      }else if(!Number(temperature)){
+        temperature=parseInt(prompt("Phai la so cu ơi"));
+      } else{
+        alert("ok rồi đó!")
+        break;
+      }
+    }
+
+</script>
+</body>
+</html>

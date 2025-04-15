@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="fibonacci"></div>
+<p>Fibonacci chia het cho 5 la</p>
+<div id="fibonacci-divide-5"></div>
+<script>
+  let output =document.getElementById("fibonacci");
+  let outDivide5=document.getElementById("fibonacci-divide-5");
+  let a=[];
+  a[0]=0;
+  a[1]=1;
+  output.innerHTML+=a[0]+"<br>";
+  output.innerHTML+=a[1]+"<br>";
+  let b=parseInt(prompt("Enter a number"));
+  for(let i=2;i<=b;i++){
+    a[i]=a[i-1]+a[i-2];
+    if(a[i] % 5 ==0){
+      outDivide5.innerHTML+=a[i]+"<br>";
+    }
+    output.innerHTML += a[i]+"<br>";
+  }
+
+</script>
+</body>
+</html>

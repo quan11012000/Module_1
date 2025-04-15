@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="display"></div>
+<script>
+    let display= document.getElementById('display');
+    function hienthi(n) {
+        let dem = 0;
+        while(dem < n){
+            display.innerHTML += `${dem}<br>`;
+            dem++;
+        }
+        alert("ban da hoan thanh");
+    }
+    let aa= parseInt(prompt("Enter a number"));
+    hienthi(aa);
+
+</script>
+</body>
+</html>
