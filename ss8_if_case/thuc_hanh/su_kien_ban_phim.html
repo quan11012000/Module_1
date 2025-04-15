@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-nobita.jpg" id="nobita" style="position:absolute;left: 0;top:0;width: 180px;height: 200px;">
+<script>
+  function upArrowPressed() {
+    let element = document.getElementById("nobita");
+    element.style.top = parseInt(element.style.top) - 5 + "px";
+  }
+  function dowArrowPressed() {
+    let element = document.getElementById("nobita");
+    element.style.top = parseInt(element.style.top) + 5 + "px";
+  }
+  function leftArrowPressed() {
+    let element = document.getElementById("nobita");
+    element.style.left = parseInt(element.style.left) - 5 + "px";
+  }
+  function rightArrowPressed() {
+    let element = document.getElementById("nobita");
+    element.style.left = parseInt(element.style.left) + 5 + "px";
+  }
+  function moveSelection(evt){
+    switch (evt.keyCode){
+      case 37:
+        leftArrowPressed();
+        break;
+      case 38:
+        rightArrowPressed();
+        break;
+      case 39:
+        dowArrowPressed();
+        break;
+      case 40:
+        upArrowPressed();
+        break;
+    }
+  }
+  function docReady(){
+    window.addEventListener("keydown", moveSelection);
+  }
+</script>
+</body>
+</html>
