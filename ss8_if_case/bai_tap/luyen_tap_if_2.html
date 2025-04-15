@@ -184,6 +184,7 @@
 </div>
   <script>
     // lãi suất
+    /*
     document.getElementById("money-first").addEventListener("blur", function () {
       let moneyFirst=document.getElementById("money-first").value;
       if(moneyFirst <0 || moneyFirst > 10e10) {
@@ -201,6 +202,21 @@
       if(month <0 || month > 1000) {
         document.getElementById("error-month").innerHTML = "hãy nhập lớn hơn 0 và bé hơn 13";
       }else document.getElementById("error-month").innerHTML = "";
+    })*/
+    function checkinterest(inputId,errorId,min,max,arleterror){
+      let number = document.getElementById(inputId).value;
+          if(number <= min||number>=max){
+            document.getElementById(errorId).innerHTML = arleterror;
+          }else document.getElementById(errorId).innerHTML = "";
+    }
+    document.getElementById("money-first").addEventListener("blur",function (){
+      checkinterest("money-first","error-money-first",0,10e10,"hãy nhập lớn hơn 0 và bé hơn 10^10");
+    })
+    document.getElementById("interest-rate").addEventListener("blur",function (){
+      checkinterest("interest-rate","error-interest",0,1,"hãy nhập lớn hơn 0 và bé hơn 100%");
+    })
+    document.getElementById("month").addEventListener("blur",function (){
+      checkinterest("month","error-month",0,1000,"hãy nhập lớn hơn 0 và bé hơn 1000");
     })
     document.getElementById("btn-carculator-interest").addEventListener("click", function () {
       let moneyFirst=parseFloat(document.getElementById("money-first").value);
@@ -242,8 +258,24 @@
         }
       }
     })
-    //cạnh tam giác
+    //cạnh tam giác dung ham
+    function triangle(inputId,errorId){
+      edge=document.getElementById(inputId).value;
+      if(!Number(edge)|| edge<0||edge>10000){
+        document.getElementById(errorId).innerHTML="Hãy nhập cạnh là số,>0,<10000";
+      }else document.getElementById(errorId).innerHTML="";
+    }
     document.getElementById("triangle-a").addEventListener("blur", function () {
+      triangle("triangle-a","error-triangle-a");
+    })
+    document.getElementById("triangle-b").addEventListener("blur", function () {
+      triangle("triangle-b","error-triangle-b");
+    })
+    document.getElementById("triangle-c").addEventListener("blur", function () {
+      triangle("triangle-c","error-triangle-c");
+    })
+    //code tam giac thu cong
+   /* document.getElementById("triangle-a").addEventListener("blur", function () {
       let triangleA = parseFloat(document.getElementById("triangle-a").value);
       if(!Number(triangleA) || triangleA <0|| triangleA > 10000){
         document.getElementById("error-triangle-a").innerHTML = "Hãy nhập cạnh a là số,>0,<10000";
@@ -267,6 +299,7 @@
         document.getElementById("error-triangle-b").innerHTML = "";
       }
     })
+    */
     document.getElementById("check-triangle").addEventListener("click", function () {
       let triangleA = parseFloat(document.getElementById("triangle-a").value);
       let triangleB = parseFloat(document.getElementById("triangle-b").value);
@@ -292,7 +325,7 @@
       }
     })
     // phuong trinh bac 2
-    document.getElementById("number-a").addEventListener("blur", function () {
+   /* document.getElementById("number-a").addEventListener("blur", function () {
       let numberA = document.getElementById("number-a").value;
       if (numberA > 10000 || numberA < -10000) {
         document.getElementById("error-number-a").innerHTML="hãy nhập a >-10000,<10000"
@@ -315,6 +348,22 @@
       }else{
         document.getElementById("error-number-c").innerHTML="";
       }
+    })
+    */
+    function checkNumber(inputId, errorId ){
+      let number = document.getElementById(inputId).value;
+      if(!Number(number) || number < -10000|| number > 10000){
+        document.getElementById(errorId).innerHTML = "hay nhap số,-10000<number<10000";
+      }else document.getElementById(errorId).innerHTML = "";
+    }
+    document.getElementById("number-a").addEventListener("blur", function () {
+      checkNumber("number-a","error-number-a");
+    })
+    document.getElementById("number-b").addEventListener("blur", function () {
+      checkNumber("number-b","error-number-b");
+    })
+    document.getElementById("number-c").addEventListener("blur", function () {
+      checkNumber("number-c","error-number-c");
     })
     document.getElementById("btn-lv2").addEventListener("click", function () {
       let numberA = parseFloat(document.getElementById("number-a").value);
@@ -404,7 +453,7 @@
       document.getElementById("result-rectangle").innerHTML = rectangleArea.toFixed();
     })
     //hinh tam giác
-    document.getElementById("triangle-edge-one").addEventListener("blur", function () {
+    document.getElementById("triangle-edge-one").addEventListener("blur", function (en) {
       let triangleEdgeOne = parseFloat(document.getElementById("triangle-edge-one").value);
       if(triangleEdgeOne<0 || triangleEdgeOne> 1000 || !Number(triangleEdgeOne)) {
         document.getElementById("error-edge-one").innerHTML="cạnh tam giác phải >0,<1000,là chữ số" ;

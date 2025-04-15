@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="check-year">
+<p id="error-year"></p>
+<button id="btn-check">Check</button>
+<p id="result"></p>
+<script>
+  document.getElementById("check-year").addEventListener("blur", function () {
+    let year = document.getElementById("check-year").value;
+    if(!Number(year) || year<0||year>100000000){
+      document.getElementById("error-year").innerHTML = "ban hay nhap nam >0,<1000000,la chu so";
+    }else document.getElementById("error-year").innerHTML="";
+  })
+  document.getElementById("btn-check").addEventListener("click", function () {
+    let year = document.getElementById("check-year").value;
+    if((year % 4 == 0 && year % 100 != 0)||(year % 400 == 0 && year % 100 == 0)){
+      document.getElementById("result").innerHTML="la nam nhuan"
+    }else document.getElementById("result").innerHTML="nam khong nhuan";
+  })
+</script>
+</body>
+</html>
