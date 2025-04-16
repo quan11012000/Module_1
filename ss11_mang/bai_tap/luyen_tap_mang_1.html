@@ -12,6 +12,8 @@
 <button type="button" id="btn-5">Bài 5</button>
 <button type="button" id="btn-6">Bài 6</button>
 <button type="button" id="btn-7">Bài 7</button>
+<button type="button" id="btn-8">Bài 8</button>
+<button type="button" id="btn-9">Bai 9</button>
 <script>
     //bai 1
 document.getElementById("btn-1").addEventListener("click", function () {
@@ -135,6 +137,31 @@ document.getElementById("btn-1").addEventListener("click", function () {
             console.log(arr[i]);
         }
 
+    })
+    document.getElementById("btn-8").addEventListener("click", function () {
+      let arr =inputArr();
+      document.write(arr+"<br>")
+      let count = 0;
+      let item="";
+      for (let i = 0; i < arr.length; i++) {
+          for (let j = i+1; j < arr.length; j++) {
+              if(arr[i] < arr[j]){
+                  item =arr[j];
+                  arr[j] =arr[i];
+                  arr[i] = item;
+              }
+          }
+          console.log("n"+arr[i]);
+          document.write(arr[i]);
+      }
+    })
+    document.getElementById("btn-9").addEventListener("click", function () {
+      let arrA =inputArr();
+      let arrB =inputArr();
+      let arrC =[];
+      arrC.push(arrA);
+      arrC.push(arrB);
+      document.write(arrC);
     })
 </script>
 </body>
