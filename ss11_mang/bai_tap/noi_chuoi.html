@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myColor=["blu","red","green","blue","yellow","orange","purple","pink","black","white"];
+    //let newColor=myColor.join('--');
+    //document.write(newColor);
+    let newColor="";
+    for(let i=0;i<myColor.length;i++){
+        newColor += myColor[i];
+        if(i<myColor.length-1){
+            newColor += ",";
+        }
+    }
+    document.write("["+newColor+"]");
+</script>
+</body>
+</html>
