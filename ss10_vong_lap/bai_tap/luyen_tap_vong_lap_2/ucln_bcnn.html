@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<input type="number" id="number-one">
+<input type="number" id="number-two">
+<button id="btnresult">UCLN</button>
+<br>
+<label>Ước chung lớn nhất là </label>
+<label id="result-ucln"></label>
+<br>
+<label>Bội chung nhỏ nhất la </label>
+<label id="result-bcnn"></label>
+<script>
+
+    document.getElementById("btnresult").addEventListener("click", function(){
+        let numberOne = parseInt(document.getElementById("number-one").value);
+        let numberTwo = parseInt(document.getElementById("number-two").value);
+        while (numberOne != numberTwo) {
+            if(numberOne > numberTwo){
+                numberOne = numberOne - numberTwo;
+            }else numberTwo = numberTwo - numberOne;
+            if(numberOne === numberTwo){
+                break;
+            }
+        }
+        document.getElementById("result-ucln").innerHTML = numberOne;
+    })
+    document.getElementById("btnresult").addEventListener("click", function(){
+        let numberOne = parseInt(document.getElementById("number-one").value);
+        let numberTwo = parseInt(document.getElementById("number-two").value);
+        let counter = 1;
+        if(numberOne < numberTwo){
+            while (numberTwo*counter % numberOne !=0) {
+
+                counter++;
+                if(numberTwo*counter % numberOne == 0){
+                    numberTwo = numberTwo *counter;
+                    break;
+                }
+            }
+            document.getElementById("result-bcnn").innerHTML = numberTwo;
+        }else{
+            while (numberOne*counter % numberTwo != 0) {
+
+                counter++;
+                if(numberOne*counter % numberTwo == 0){
+                    numberOne = numberOne *counter;
+                    break;
+                }
+            }
+            document.getElementById("result-bcnn").innerHTML = numberOne;
+        }
+    })
+
+</script>
+</body>
+</html>

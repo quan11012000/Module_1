@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = parseInt(prompt("nhap vao 1 so"));
+    let total = 0;
+    let core = 1;
+    let saveinput = input;
+    while (saveinput>0){
+        total = total+(saveinput % 10);
+        core = core*(saveinput % 10);
+        saveinput = Math.floor(saveinput/10);
+        console.log(saveinput);
+    }
+    document.write('Tổng là: '+total);
+    document.write("<br>");
+    document.write("Tích là: "+core);
+</script>
+</body>
+</html>
