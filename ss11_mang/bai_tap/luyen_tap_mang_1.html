@@ -10,6 +10,8 @@
 <button type="button" id="btn-3">Bài 3</button>
 <button type="button" id="btn-4">Bài 4</button>
 <button type="button" id="btn-5">Bài 5</button>
+<button type="button" id="btn-6">Bài 6</button>
+<button type="button" id="btn-7">Bài 7</button>
 <script>
     //bai 1
 document.getElementById("btn-1").addEventListener("click", function () {
@@ -100,6 +102,39 @@ document.getElementById("btn-1").addEventListener("click", function () {
         }
         document.write(" so lon nhat la "+arr.join()+"<br>");
         document.write(" so nguyen am co trong chuoi la "+count);
+    })
+    document.getElementById("btn-6").addEventListener("click", function () {
+        let arr =inputArr();
+        let count = 0;
+        let number=parseInt(prompt("nhap so nguyen V"));
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == number) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            alert("V is in the array");
+        }else alert("V is not in the array");
+    })
+    document.getElementById("btn-7").addEventListener("click", function () {
+        let arr =inputArr();
+        let count = 0;
+        let number=parseInt(prompt("nhap so nguyen V"));
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == number) {
+                arr.splice(i,1);
+                count++;
+            }
+        }
+        for (let i = 0; i < arr.length+count; i++) {
+            document.write(arr[i]);
+            while (arr.length <arr.length+count){
+                arr.push(0);
+                count--;
+            }
+            console.log(arr[i]);
+        }
+
     })
 </script>
 </body>
