@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" id="btn-1">Bài 1</button>
+<button type="button" id="btn-2">Bài 2</button>
+<button type="button" id="btn-3">Bài 3</button>
+<button type="button" id="btn-4">Bài 4</button>
+<script>
+    //bai 1
+document.getElementById("btn-1").addEventListener("click", function () {
+    let count = 0;
+    let arr = [];
+    let n = parseInt(prompt("nhap n"));
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("nhap a" + i));
+    }
+    for (let i = 0; i < n; i++) {
+        if (arr[i] >= 10) {
+            count++;
+            document.write("vị trí" + i + "=" + arr[i] + "<br>");
+        }
+    }
+    document.write("tong so lon hon 10 là: " + count);
+})
+    // ham nhap
+    function inputArr(){
+        let input=parseInt(prompt("nhap n"));
+        let arr = [];
+        for (let i = 0; i < input; i++) {
+            arr[i] = parseInt(prompt("nhap a" + i));
+        }
+        return arr;
+    }
+//bai 2
+    document.getElementById("btn-2").addEventListener("click", function () {
+        let count = 0;
+
+        let arr =inputArr();
+        let max=arr[0];
+        let sum = max;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                count=i;
+            }
+            sum+=arr[i];
+        }
+        document.write(" so lon nhat la "+max+", vi t ri la "+count);
+        document.write("<br>");
+        document.write("gia tri trung binh la: "+sum/arr.length.toFixed(2));
+    })
+    document.getElementById("btn-3").addEventListener("click", function () {
+        let count = 0;
+
+        let arr =inputArr();
+        let max=arr[0];
+        let sum = max;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                count=i;
+            }
+            sum+=arr[i];
+        }
+        document.write(" so lon nhat la "+max+", vi t ri la "+count);
+        document.write("<br>");
+        document.write("gia tri trung binh la: "+sum/arr.length.toFixed(2));
+    })
+    document.getElementById("btn-4").addEventListener("click", function () {
+        let count = 0;
+        let arr =inputArr();
+        let first=0;
+        let last=arr.length-1;
+        let temp;
+        document.write(arr);
+        for (let i = 0; i < arr.length/2; i++) {
+            temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+            first++;
+            last--;
+        }
+        document.write("<br><br>");
+        document.write(arr);
+    })
+</script>
+</body>
+</html>
