@@ -11,17 +11,17 @@
 <script>
   let output =document.getElementById("fibonacci");
   let displaysum=document.getElementById("fibonacci-divide-5");
-  let a=[];
-  a[0]=0;
-  a[1]=1;
+  let arr=[];
+  arr[0]=0;
+  arr[1]=1;
   let sum=1;
-  output.innerHTML+=a[0]+"<br>";
-  output.innerHTML+=a[1]+"<br>";
-  let b=parseInt(prompt("Enter a number"));
-  for(let i=2;i<=b;i++){
-    a[i]=a[i-1]+a[i-2];
-    sum+=a[i];
-    output.innerHTML += a[i]+"<br>";
+  output.innerHTML+=arr[0]+"<br>";
+  output.innerHTML+=arr[1]+"<br>";
+  let count=parseInt(prompt("Enter a number"));
+  for(let i=2;i<=count;i++){
+    arr[i]=arr[i-1]+arr[i-2];
+    sum+=arr[i];
+    output.innerHTML += arr[i]+"<br>";
   }
   displaysum.innerHTML += sum;
 </script>

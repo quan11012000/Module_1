@@ -9,15 +9,15 @@
 <script>
     let display= document.getElementById('display');
     function hienthi(n) {
-        let dem = 0;
-        while(dem < n){
-            display.innerHTML += `${dem}<br>`;
-            dem++;
+        let count = 0;
+        while(count < n){
+            display.innerHTML += `${count}<br>`;
+            count++;
         }
         alert("ban da hoan thanh");
     }
-    let aa= parseInt(prompt("Enter a number"));
-    hienthi(aa);
+    let displayoutput= parseInt(prompt("Enter a number"));
+    hienthi(displayoutput);
 
 </script>
 </body>
