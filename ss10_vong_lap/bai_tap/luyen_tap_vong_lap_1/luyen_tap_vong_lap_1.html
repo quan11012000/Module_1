@@ -8,7 +8,7 @@
 <div id="display"></div>
 <script>
     let display= document.getElementById('display');
-    function hienthi(n) {
+    function displayResult(n) {
         let count = 0;
         while(count < n){
             display.innerHTML += `${count}<br>`;
@@ -16,8 +16,8 @@
         }
         alert("ban da hoan thanh");
     }
-    let displayoutput= parseInt(prompt("Enter a number"));
-    hienthi(displayoutput);
+    let inputNumber= parseInt(prompt("Enter a number"));
+    displayResult(inputNumber);
 
 </script>
 </body>
