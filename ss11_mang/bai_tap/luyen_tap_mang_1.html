@@ -159,8 +159,8 @@ document.getElementById("btn-1").addEventListener("click", function () {
       let arrA =inputArr();
       let arrB =inputArr();
       let arrC =[];
-      arrC.push(arrA);
-      arrC.push(arrB);
+      arrC=arrA.concat(arrB);
+      console.log(arrC);
       document.write(arrC);
     })
 </script>
