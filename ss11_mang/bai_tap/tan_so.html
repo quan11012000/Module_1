@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn-frequency">Frequency</button>
+<script>
+    function inputArr(){
+        let input=parseInt(prompt("nhap n"));
+        let arr = [];
+        for (let i = 0; i < input; i++) {
+            arr[i] = (prompt("nhap a" + i));
+        }
+        return arr;
+    }
+    document.getElementById("btn-frequency").addEventListener("click", function () {
+        let arrAs=inputArr();
+        let arrBs=inputArr();
+        let arrIndexA=[];
+        let arrIndexB=[];
+        let arrAnswer=[];
+        for (let i = 0; i < arrAs.length; i++) {
+            let index = arrAs[i].charCodeAt(0);
+            if(arrIndexA[index] === undefined){
+                arrIndexA[index] = 1;
+            }else arrIndexA[index]++;
+
+        }
+        for (let i = 0; i < arrBs.length; i++) {
+            let index = arrBs[i].charCodeAt(0);
+            if(arrIndexB[index] === undefined){
+                arrIndexB[index] = 1;
+            }else arrIndexB[index]++;
+        }
+        let length;
+        let count = 0;
+        console.log(arrIndexA);
+        console.log(arrIndexB);
+        if (arrIndexB.length > arrIndexA.length) {
+            length = arrIndexB.length;
+        }else length = arrIndexA.length;
+        for (let i = 0; i < length; i++) {
+            if(arrIndexA[i] === undefined && arrIndexB[i] !== undefined){
+                document.write(0);
+                return;
+            }
+            if(arrIndexA[i] !== undefined && arrIndexB[i] !== undefined){
+                count++;
+                if(arrIndexA[i] <= arrIndexB[i]){
+                    arrAnswer.push(arrIndexB[i]);
+                }else{
+                    arrAnswer.push(arrIndexA[i]);
+                }
+            }
+
+        }
+            console.log(arrAnswer);
+            document.write(Math.min(...arrAnswer));
+    })
+
+</script>
+</body>
+</html>

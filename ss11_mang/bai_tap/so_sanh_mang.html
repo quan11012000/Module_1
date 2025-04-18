@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn-frequency">Frequency</button>
+<script>
+  // ham nhap
+  function inputArr(){
+    let input=parseInt(prompt("nhap n"));
+    let arr = [];
+    for (let i = 0; i < input; i++) {
+      arr[i] = parseInt(prompt("nhap a" + i));
+    }
+    return arr;
+  }
+  // so sanh);
+  document.getElementById("btn-frequency").addEventListener("click", function () {
+    let arr=inputArr();
+    let arrs=[];
+    let count;
+    let frequency=0;
+    for (let i = 0; i < arr.length; i++) {
+      count=0;
+      for (let j = 0; j < arr.length; j++) {
+        if (arr[i] == arr[j]) {
+          count++;
+        }
+      }
+      arrs[i]=count;
+    }
+    for (let i = 0; i < arrs.length-1; i++) {
+      if (arrs[i] == arrs[i+1]) {
+        frequency++;
+      }
+    }
+    console.log(arrs);
+    if (frequency+1 == arrs.length) {
+      document.write("True");
+    }else document.write("False");
+  })
+
+
+</script>
+</body>
+</html>

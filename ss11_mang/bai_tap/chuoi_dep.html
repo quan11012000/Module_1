@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="beautiful-arr"></button>
+<script>
+    function inputArr(){
+        let input=parseInt(prompt("nhap n"));
+        let arr = [];
+        for (let i = 0; i < input; i++) {
+            arr[i] = parseInt(prompt("nhap a" + i));
+        }
+        return arr;
+    }
+    document.getElementById("beautiful-arr").addEventListener("click", function () {
+      let arr = inputArr();
+      let sumfirst=0;
+      let sumlast;
+      for (let i = 0; i < arr.length; i++) {
+          sumfirst += arr[i];
+          sumlast = 0;
+          for (let j = i+2; j < arr.length; j++) {
+              sumlast += arr[j];
+              console.log(sumfirst, sumlast);
+          }
+          if (sumfirst == sumlast) {
+              return document.write("True");
+
+          }
+      }
+      document.write("False");
+    })
+</script>
+</body>
+</html>

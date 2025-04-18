@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function circlenum(L, R) {
+    let count = 0;
+    for (let num = L; num <= R; num++) {
+      let numStr = num.toString();
+      if (numStr[0] === numStr[numStr.length - 1]) {
+        count++;
+      }
+    }
+    return count;
+  }
+  const L = 100;
+  const R = 1000;
+  console.log(circlenum(L, R));
+</script>
+</body>
+</html>

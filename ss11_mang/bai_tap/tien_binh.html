@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let string= prompt("nhap chuoi");
+  let arr=string.split(",").map(i=>+i);
+  let arrResult=[];
+  let arrMin=[];
+  let moneyFirst=parseInt(prompt("Nhap so  tien ban dau"));
+  length=arr.length;
+  let max=0;
+  let min=0;
+  let maxProfit =Math.max(...arrResult);
+  for(let i=length-1;i>0;i--){
+      max=arr[i];
+      min=0;
+      for(let j=i-1;j>=0;j--){
+          if(arr[j]===0)continue;
+          if(arr[j]<min || min===0){
+              min=arr[j];
+          }
+      }
+      console.log(max,min);
+      arrResult.push(max-min) ;
+      arrMin.push(min);
+  }
+  if(arrMin[arrResult.indexOf(maxProfit)] > moneyFirst){
+      document.write("Binh khong du tien mua");
+  }else{
+      document.write(moneyFirst+maxProfit);
+  }
+
+</script>
+</body>
+</html>

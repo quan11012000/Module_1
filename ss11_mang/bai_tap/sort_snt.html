@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="sort-prime">check</button>
+<script>
+    function sortPrime(n,m) {
+        let array=[];
+        for(let i=0;i<n;i++){
+            array[i]=[];
+            for(let j=0;j<m;j++){
+                array[i][j]=parseInt(prompt("nhap phan tu "+ "array"+i+" "+j));
+            }
+        }
+        return array;
+    }
+    document.getElementById("sort-prime").addEventListener("click",function(){
+        let array=sortPrime(4,4);
+        let arranswer=[];
+        console.log(array);
+        for(let i=0;i<array.length;i++){
+            for(let j=0;j<array[i].length;j++){
+                let count=0;
+                for(let k=2;k <= array[i][j]/2;k++){
+                    if(array[i][j] % k == 0){
+                        count++;
+                    }
+                }
+                // includes kiem tra co ton tai trong mang hay khong neu có tra ve true
+                if(count==0 && !arranswer.includes(array[i][j])){
+                    arranswer.push(array[i][j]);
+                }
+            }
+        }
+        document.write(arranswer.join(" "));
+    })
+</script>
+</body>
+</html>

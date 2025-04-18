@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="pen">pen</button>
+<script>
+  let input =prompt("nhap so luong km va so hoc ks");
+  let arr=input.split(",").map(i=>+i);
+  document.write(arr);
+  document.write("<br>");
+  console.log(arr[0]);
+  if(arr[0] > arr[2]){
+      document.write(arr[2]);
+  }else {
+      if (arr[2] % (arr[0] + arr[1]) < arr[0]) {
+          let sumPen = Math.floor(Math.floor((arr[2] / (arr[0] + arr[1]))) * arr[0]) + (arr[2] - ((Math.floor(arr[2]/(arr[0] + arr[1]))) * (arr[0]+arr[1])));
+          document.write(sumPen);
+      } else {
+          if (arr[2] % (arr[0] + arr[1]) < arr[1] + arr[0]) {
+              document.write(Math.floor(arr[0] * (Math.floor((arr[2] / (arr[0] + arr[1]))) + 1)));
+          } else {
+              if (arr[0] + arr[1] >= arr[2]) {
+                  document.write(arr[0]);
+              }
+          }
+      }
+  }
+
+
+
+
+
+</script>
+</body>
+</html>

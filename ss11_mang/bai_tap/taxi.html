@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input=prompt("nhap chuoi so");
+    let arr=input.split(",");
+    let arrCount=[];
+    for(let i=0;i<arr.length;i++){
+        let index = arr[i].charCodeAt(0);
+        if(arrCount[index] === undefined){
+            arrCount[index] = 1;
+        }else{
+            arrCount[index]++;
+        }
+    }
+    let one=arrCount[49] ? arrCount[49]:0;
+    let two=arrCount[50]? arrCount[50]:0;
+    let three=arrCount[51]? arrCount[51]:0;
+    let four=arrCount[52] ? arrCount[52]:0;
+    let twoTwo=Math.floor(two/2);
+    let oneOne =Math.floor(one/4) ;
+    let sum=0;
+        one=one%4;
+        if(one>=three){
+            one=one-three;
+        }
+        if(one!=0){
+            sum=oneOne+twoTwo+three+four+1;
+        }else{
+            if(two % 2==0){
+                sum=oneOne+twoTwo+three+four;
+            }else sum=oneOne+twoTwo+three+four+1;
+        }
+    document.write(sum);
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn-short">Short</button>
+<script>
+  function inputArr(){
+    let input=parseInt(prompt("nhap n"));
+    let arr = [];
+    for (let i = 0; i < input; i++) {
+      arr[i] = parseInt(prompt("nhap a" + i));
+    }
+    return arr;
+  }
+  document.getElementById("btn-short").addEventListener("click", function () {
+    let arr =inputArr();
+    document.write(arr+"<br>")
+    let item="";
+    for (let i = 0; i < arr.length; i++) {
+      if(arr[i] === -1){
+        continue;
+      }else{
+        for (let j = i+1; j < arr.length; j++) {
+          if(arr[j] === -1){
+            continue;
+          }else{
+            if(arr[i] > arr[j]){
+              item =arr[j];
+              arr[j] =arr[i];
+              arr[i] = item;
+            }
+          }
+        }
+      }
+    }
+    console.log("n"+arr);
+    document.write(arr);
+  })
+</script>
+</body>
+</html>
