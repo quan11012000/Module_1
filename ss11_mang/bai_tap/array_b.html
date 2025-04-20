@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputA=prompt("nhap chuoi a");
+    let arrA=inputA.split(",");
+    let arrB=[];
+    let sum;
+    let length=arrA.length;
+    for(let i=0;i<arrA.length;i++){
+        sum=0;
+        for(j=0;j<=i;j++){
+            sum += +arrA[j];
+        }
+        arrB.push(sum);
+    }
+    document.write(arrB.join(", "));
+</script>
+</body>
+</html>

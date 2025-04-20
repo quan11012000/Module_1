@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let input=prompt("nhap chuoi");
+  let arr=input.split("");
+  let count=0;
+  let length=Math.floor(arr.length/2);
+  for(let i=0;i<length;i++){
+    if(arr[i]===arr[arr.length-i-1]){
+      count++;
+    }
+  }
+  console.log(count);
+  console.log(length);
+  if(count===length){
+    document.write("chuoi doi xung");
+  }else document.write("chuoi khong doi xung");
+</script>
+</body>
+</html>
