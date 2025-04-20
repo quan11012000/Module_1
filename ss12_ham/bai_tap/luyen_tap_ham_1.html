@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn-1">Bài 1</button>
+<button id="btn-2">Bài 2</button>
+<button id="btn-3">Bài 3</button>
+<button id="btn-4">Bài 4</button>
+<button id="btn-5">Bài 5</button>
+<script>
+    // bai 1
+    function alertMessage(){
+        alert("Xin chao");
+    }
+    document.getElementById("btn-1").addEventListener("click", function(){
+        alertMessage();
+    })
+    // bai 2
+    let number =3;
+    function numberCount(number){
+        return ++number;
+    }
+    document.getElementById("btn-2").addEventListener("click", function(){
+        number = numberCount(number);
+        console.log(number);
+    })
+// bài 3
+    function compareNumbers(number1,number2){
+        if(number1 > number2){
+            alert(number1 +" lớn hơn "+ number2);
+        }else{
+            let result;
+            result = number1*1 + number2*1;
+            return result;
+        }
+
+    }
+    document.getElementById("btn-3").addEventListener("click", function(){
+        let number1=parseInt(prompt("nhap so thu 1"));
+        let number2=parseInt(prompt("nhap so thu 2"));
+        let check=compareNumbers(number1,number2);
+        if(check != null){
+            alert(check);
+        }
+    })
+    // bai 4
+
+    document.getElementById("btn-4").addEventListener("click", function(){
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+        }
+        result = 0;
+        alert("Kết quả trước khi gọi hàm "+result);
+        result = addNumbers();
+        alert("Kết quả sau khi gọi hàm "+result);
+    })
+    // bai 5
+    function checkStar(star) {
+        let index = arrA.indexOf(star);
+        if(index > -1){
+            return arrB[index];
+        }
+    }
+    let arrA =['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    let arrB =['Ursa Minor','Taurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+    document.getElementById("btn-5").addEventListener("click", function(){
+      let input=prompt("nhap ngoi sao");
+      let result = checkStar(input);
+      if(result!=null){
+          alert(result);
+      }else alert("khong tim thay tu tuong ung");
+    })
+</script>
+</body>
+</html>
