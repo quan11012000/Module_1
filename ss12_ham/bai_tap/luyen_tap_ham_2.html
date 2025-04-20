@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn-1">Bai 1</button>
+<button id="btn-2">Bai 2</button>
+<button id="btn-3">Bai 3</button>
+<button id="btn-4">Bai 4</button>
+<button id="btn-5">Bai 5</button>
+<button id="btn-6">Bai 6</button>
+<button id="btn-7">Bai 7</button>
+<button id="btn-8">Bai 8</button>
+<button id="btn-9">Bai 9</button>
+<script>
+    // bai 1
+    function square(a){
+        return a * a;
+    }
+    document.getElementById("btn-1").addEventListener("click", function(){
+        let input=prompt("Nhập số bất kì ");
+        alert("Binh phương của "+input+" là :"+square(input));
+    })
+    //bài 2
+    function acreageCricle(r){
+        return r*r*3.14.toFixed(2);
+    }
+    function perimeterCricle(r){
+        return r*2*3.14.toFixed(2);
+    }
+    document.getElementById("btn-2").addEventListener("click", function(){
+        let inputRadius=parseFloat(prompt("Nhap ban kinh"));
+        alert("chu vi hình tròn là :"+perimeterCricle(inputRadius)+"\n"+"diện tích hình tròn là :"+acreageCricle(inputRadius));
+    })
+    // bai 3
+    function factorial(a){
+        let core=1
+        for(let i=1;i<=a;i++){
+            core *= i;
+        }
+        return core;
+    }
+    document.getElementById("btn-3").addEventListener("click", function(){
+      let input = parseFloat(prompt("Nhap so tu nhien"));
+      alert(input+"! = "+factorial(input));
+    })
+    // bai 4
+    function checkCharacter(input){
+        if(!Number(input)){
+            return false;
+        }else return true;
+    }
+    document.getElementById("btn-4").addEventListener("click", function(){
+      let input=prompt("Nhap ki tu");
+      if(checkCharacter(input)){
+          alert(checkCharacter(input));
+      }else alert(checkCharacter(input));
+    })
+    // bai 5
+
+    function min(a,b,c){
+        if(a>b){
+            if(a>c){
+                return c;
+            }else return a;
+        }else if(b>c){
+            return c;
+        }else return b;
+    }
+    document.getElementById("btn-5").addEventListener("click", function(){
+        let a=parseInt(prompt("Nhap a"));
+        let b=parseInt(prompt("Nhap b"));
+        let c=parseInt(prompt("Nhap c"));
+        let result = min(a,b,c);
+        alert("số lớn nhất là : "+result);
+    })
+    // bai 6
+    function checkYinYang(input){
+        if(input===0){
+            alert("Âm duương");
+        }else{
+            return (input>0)?true:false;
+        }
+    }
+    document.getElementById("btn-6").addEventListener("click", function(){
+      let input= parseFloat(prompt("Nhap so"));
+      if(checkYinYang(input)!=null){
+          alert(checkYinYang(input));
+      }
+    })
+    // bai 7
+    function swap(a,b){
+        document.write(a+" "+b);
+        document.write("<br>");
+        document.write(b+" "+a);
+    }
+    document.getElementById("btn-7").addEventListener("click", function(){
+      let a=parseInt(prompt("Nhap so a"));
+      let b=parseInt(prompt("Nhap so b"));
+      swap(a,b);
+    })
+    // bai 8
+    function reverseArr(arr){
+        let length=arr.length;
+        let item;
+        for(let i=0;i<=length/2;i++){
+            item=arr[i];
+            arr[i]=arr[length-i-1];
+            arr[length-i-1]=item;
+        }
+    }
+    document.getElementById("btn-8").addEventListener("click", function(){
+      let arr=[];
+      let lengtharr= parseInt(prompt("Nhap so phan tu"));
+      for(let i=0;i<lengtharr;i++){
+          arr[i]=parseInt(prompt("nhap phan tu thu"+i));
+      }
+      document.write(arr);
+      reverseArr(arr);
+      document.write(arr);
+    })
+    // bai 9
+    function checkExist(a,arr){
+        let count =0;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]===a){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    document.getElementById("btn-9").addEventListener("click", function(){
+        let a=prompt("nhap ki tu");
+        let strings=prompt("Nhap chuoi ki tự");
+        let arr=strings.split(",");
+        if(checkExist(a,arr)>0){
+            alert(checkExist(a,arr));
+        }else alert("-1");
+
+    })
+</script>
+</body>
+</html>
