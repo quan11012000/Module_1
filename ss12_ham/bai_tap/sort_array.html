@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputarr(){
+        let arr=[];
+        let length= prompt("nhap chieu dai cua mang");
+        for(let i=0;i<length;i++){
+            arr[i]=prompt("nhap phan tu thu"+i);
+        }
+        return arr;
+    }
+    function sortIncrease(arr){
+        let item;
+        for(let i=0;i<arr.length;i++){
+            for(let j=i;j<arr.length;j++){
+                if(arr[i]>arr[j]){
+                    item=arr[j];
+                    arr[j]=arr[i];
+                    arr[i]=item;
+                }
+            }
+        }
+        return arr;
+    }
+    function sortDecrease(arr){
+        let item;
+        for(let i=0;i<arr.length;i++){
+            for(let j=i;j<arr.length;j++){
+                if(arr[i]<arr[j]){
+                    item=arr[j];
+                    arr[j]=arr[i];
+                    arr[i]=item;
+                }
+            }
+        }
+        return arr;
+    }
+    function compare() {
+        let array = inputarr();
+        let arrIncrease = sortIncrease([...array]);
+        let arrDecrease = sortDecrease([...array]);
+        console.log(arrIncrease,arrDecrease,array);
+        for(let i=0;i<array.length;i++){
+            if(array[i]==arrIncrease[i] || array[i]==arrDecrease[i]){
+                return true;
+            }else return false;
+        }
+    }
+    if(compare()){
+        alert("ok");
+    }else alert("notok");
+
+</script>
+</body>
+</html>

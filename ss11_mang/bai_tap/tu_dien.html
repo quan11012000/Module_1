@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkStar(star) {
+        let index = arrA.indexOf(star);
+        if(index > -1){
+            return arrB[index];
+        }
+    }
+    let arrA =['fb','ntq','ytb','gg','cc'];
+    let arrB =['facebook','nguyen tien quan','youtube','google','concat'];
+
+        let input=prompt("nhap tu viet tat");
+        let result = checkStar(input);
+        if(result!=null){
+            alert(result);
+        }else alert("khong tim thay");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="even-odd">kiemtra</button>
+<script>
+    function inputarr(){
+        let arr=[];
+        let length= prompt("nhap chieu dai cua mang");
+        for(let i=0;i<length;i++){
+            arr[i]=prompt("nhap phan tu thu"+i);
+        }
+        return arr;
+    }
+    function checkEvenOdd(n){
+        if(n%2==0){
+            return true;
+        }else return false;
+    }
+    document.getElementById("even-odd").addEventListener("click", function(){
+        let array=inputarr();
+        let count=0;
+        document.write(array);
+        for(let i=0;i<array.length;i++){
+            if(checkEvenOdd(array[i])){
+                count++;
+            }
+        }
+        if(array.length%2!=0){
+            alert("so chan le trong chuoi khong bang nhau");
+        }else if(count==array.length/2){
+            alert("so chan le bang nhau");
+        }else alert("khong bang nhau");
+    })
+</script>
+</body>
+</html>
