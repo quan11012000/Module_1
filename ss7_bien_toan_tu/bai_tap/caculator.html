@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4" ><textarea id="display" style="width:300px;height:50px"></textarea></td>
+    </tr>
+    <tr>
+        <td><button id="btn-1"  style="width: 70px; height:70px;font-size:20px" value="1">1</button></td>
+        <td><button id="btn-2"  style="width: 70px; height:70px;font-size:20px" value="2">2</button></td>
+        <td><button id="btn-3"  style="width: 70px; height:70px;font-size:20px" value="3">3</button></td>
+        <td><button id="btn-tatol"  style="width: 70px; height:70px;font-size:20px" value="+">+</button></td>
+    </tr>
+    <tr>
+        <td><button id="btn-4" style="width: 70px; height:70px;font-size:20px" value="4">4</button></td>
+        <td><button id="btn-5"  style="width: 70px; height:70px;font-size:20px" value="5">5</button></td>
+        <td><button id="btn-6"  style="width: 70px; height:70px;font-size:20px" value="6">6</button></td>
+        <td><button id="btn-subtraction" onclick="subtraction" style="width: 70px; height:70px;font-size:20px" value="-">-</button></td>
+    </tr>
+    <tr>
+        <td><button id="btn-7"  style="width: 70px; height:70px;font-size:20px" value="7">7</button></td>
+        <td><button id="btn-8"  style="width: 70px; height:70px;font-size:20px" value="8">8</button></td>
+        <td><button id="btn-9"  style="width: 70px; height:70px;font-size:20px" value="9">9</button></td>
+        <td><button id="btn-core"  style="width: 70px; height:70px;font-size:20px" value="*">*</button></td>
+    </tr>
+    <tr>
+        <td><button id="btn-reset"  style="width: 70px; height:70px;font-size:20px">C</button></td>
+        <td><button id="btn-0"  style="width: 70px; height:70px;font-size:20px" value="0">0</button></td>
+        <td><button id="btn-result"  style="width: 70px; height:70px;font-size:20px">=</button></td>
+        <td><button id="btn-division"  style="width: 70px; height:70px;font-size:20px" value="/">/</button></td>
+    </tr>
+</table>
+<script>
+    function click(btn,display){
+        document.getElementById(btn).addEventListener("click",function(){
+            document.getElementById(display).innerHTML += document.getElementById(btn).value;
+        })
+    }
+    click("btn-2","display");
+    click("btn-1","display");
+    click("btn-3","display");
+    click("btn-4","display");
+    click("btn-5","display");
+    click("btn-6","display");
+    click("btn-7","display");
+    click("btn-8","display");
+    click("btn-9","display");
+    click("btn-0","display");
+    click("btn-tatol","display");
+    click("btn-subtraction","display");
+    click("btn-division","display");
+    click("btn-core","display");
+
+</script>
+</body>
+</html>
