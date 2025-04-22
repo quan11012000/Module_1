@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="start">Bắt đầu</button>
+
+<script>
+    document.getElementById("start").addEventListener("click", function(){
+        let max=parseInt(prompt("Hãy nhập khoảng cách lớn nhất bạn có thể đoán"));
+        let count=0;
+        let input;
+        let result=Math.floor(Math.random()*max);
+        while(max>1){
+            max=max/2;
+            count++;
+        }
+        while(count>1){
+            input = prompt("nhap so ban doan nào");
+            if(input=== result){
+                alert("wow bạn đoán trúng rồi, giỏi quá");
+                break;
+            }else{
+                if(input>result){
+                    alert("số đó nhỏ hơn");
+                }else alert("số đó lớn hơn");
+            }
+            count--;
+        }
+        alert('ban thua rồi');
+    })
+</script>
+</body>
+</html>
