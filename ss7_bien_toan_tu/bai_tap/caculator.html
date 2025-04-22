@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .container {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-<table>
-    <tr>
-        <td colspan="4" ><textarea id="display" style="width:300px;height:50px"></textarea></td>
-    </tr>
-    <tr>
-        <td><button id="btn-1"  style="width: 70px; height:70px;font-size:20px" value="1">1</button></td>
-        <td><button id="btn-2"  style="width: 70px; height:70px;font-size:20px" value="2">2</button></td>
-        <td><button id="btn-3"  style="width: 70px; height:70px;font-size:20px" value="3">3</button></td>
-        <td><button id="btn-tatol"  style="width: 70px; height:70px;font-size:20px" value="+">+</button></td>
-    </tr>
-    <tr>
-        <td><button id="btn-4" style="width: 70px; height:70px;font-size:20px" value="4">4</button></td>
-        <td><button id="btn-5"  style="width: 70px; height:70px;font-size:20px" value="5">5</button></td>
-        <td><button id="btn-6"  style="width: 70px; height:70px;font-size:20px" value="6">6</button></td>
-        <td><button id="btn-subtraction" onclick="subtraction" style="width: 70px; height:70px;font-size:20px" value="-">-</button></td>
-    </tr>
-    <tr>
-        <td><button id="btn-7"  style="width: 70px; height:70px;font-size:20px" value="7">7</button></td>
-        <td><button id="btn-8"  style="width: 70px; height:70px;font-size:20px" value="8">8</button></td>
-        <td><button id="btn-9"  style="width: 70px; height:70px;font-size:20px" value="9">9</button></td>
-        <td><button id="btn-core"  style="width: 70px; height:70px;font-size:20px" value="*">*</button></td>
-    </tr>
-    <tr>
-        <td><button id="btn-reset"  style="width: 70px; height:70px;font-size:20px">C</button></td>
-        <td><button id="btn-0"  style="width: 70px; height:70px;font-size:20px" value="0">0</button></td>
-        <td><button id="btn-result"  style="width: 70px; height:70px;font-size:20px">=</button></td>
-        <td><button id="btn-division"  style="width: 70px; height:70px;font-size:20px" value="/">/</button></td>
-    </tr>
+
+    <div class="container">
+        <table>
+        <tr>
+            <td colspan="4" ><input id="display" style="width:300px;height:80px;font-size: 20px"><td>
+        </tr>
+        <tr>
+            <td><button id="btn-1"  style="width: 70px; height:70px;font-size:20px" value="1">1</button></td>
+            <td><button id="btn-2"  style="width: 70px; height:70px;font-size:20px" value="2">2</button></td>
+            <td><button id="btn-3"  style="width: 70px; height:70px;font-size:20px" value="3">3</button></td>
+            <td><button id="btn-tatol"  style="width: 70px; height:70px;font-size:20px" value="+">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn-4" style="width: 70px; height:70px;font-size:20px" value="4">4</button></td>
+            <td><button id="btn-5"  style="width: 70px; height:70px;font-size:20px" value="5">5</button></td>
+            <td><button id="btn-6"  style="width: 70px; height:70px;font-size:20px" value="6">6</button></td>
+            <td><button id="btn-subtraction" onclick="subtraction" style="width: 70px; height:70px;font-size:20px" value="-">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn-7"  style="width: 70px; height:70px;font-size:20px" value="7">7</button></td>
+            <td><button id="btn-8"  style="width: 70px; height:70px;font-size:20px" value="8">8</button></td>
+            <td><button id="btn-9"  style="width: 70px; height:70px;font-size:20px" value="9">9</button></td>
+            <td><button id="btn-core"  style="width: 70px; height:70px;font-size:20px" value="*">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn-reset"  style="width: 70px; height:70px;font-size:20px">C</button></td>
+            <td><button id="btn-0"  style="width: 70px; height:70px;font-size:20px" value="0">0</button></td>
+            <td><button id="btn-result"  style="width: 70px; height:70px;font-size:20px">=</button></td>
+            <td><button id="btn-division"  style="width: 70px; height:70px;font-size:20px" value="/">/</button></td>
+        </tr>
 </table>
+    </div>
+
 <script>
     function click(btn,display){
+        document.getElementById(btn).addEventListener('mouseover',function(e){
+            e.target.style.backgroundColor='orange';
+        })
+        document.getElementById(btn).addEventListener('mouseout',function(e){
+            e.target.style.backgroundColor='white';
+        })
         document.getElementById(btn).addEventListener("click",function(){
-            document.getElementById(display).innerHTML += document.getElementById(btn).value;
+            document.getElementById(display).value += document.getElementById(btn).value;
         })
     }
     click("btn-2","display");
@@ -54,7 +72,15 @@
     click("btn-subtraction","display");
     click("btn-division","display");
     click("btn-core","display");
-
+    function calculator(){
+       let operation= document.getElementById("display").value;
+       let result= eval(operation);
+       document.getElementById("display").value = result;
+    }
+    document.getElementById("btn-result").addEventListener("click",calculator);
+    document.getElementById("btn-reset").addEventListener("click",function(){
+        document.getElementById("display").value = "";
+    })
 </script>
 </body>
 </html>
