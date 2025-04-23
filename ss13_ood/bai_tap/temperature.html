@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        celsius;
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+        convertToF(){
+            return this.celsius*1.8+32;
+        }
+        convertToK(){
+            return this.celsius+273.15;
+        }
+    }
+    let celsius ;
+    do{
+        celsius = prompt("Nhập độ C");
+      if (celsius < -273) {
+          alert("hãy nhập độ C lớn hơn -273")
+      }else if(celsius > 100000 ){
+          alert("hãy nhập độ C bé hơn 100000")
+      }else if(!Number(celsius)){
+          alert("hãy nhập độ C là số")
+      }
+    }while(celsius< -273 || celsius>100000 || !Number(celsius))
+    let temperature = new Temperature(celsius);
+    document.write("độ C sang độ F là "+temperature.convertToF());
+    document.write("<br>");
+    document.write("độ C sang độ K là "+ temperature.convertToK());
+
+
+
+</script>
+</body>
+</html>

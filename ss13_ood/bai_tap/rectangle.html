@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="300" style="border:1px solid #000000;"></canvas>
+<script>
+    class Rectangle {
+        height;
+        width;
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+        acreage(){
+            return this.height * this.width;
+        }
+        perimeter(){
+            return (this.width + this.height)*2;
+        }
+        draw(){
+            let ctx=document.getElementById('myCanvas').getContext('2d');
+
+            let grd=this.gradient(ctx);
+            ctx.fillStyle=grd;
+            ctx.fillRect(0, 0, this.width*100, this.height*100);
+        }
+        gradient(ctx){
+            let grd=ctx.createLinearGradient(0, 0, this.width*100, 0);
+            grd.addColorStop(0, 'white');
+            grd.addColorStop(1, 'red');
+            return grd;
+        }
+    }
+    let longEdge=parseInt(prompt("Long edge"));
+    let shortEdge=parseInt(prompt("Short edge"));
+    let rectangle=new Rectangle(longEdge,shortEdge);
+    alert("Diện tích hình chữ nhật là "+rectangle.acreage());
+    alert("chu vi hình chữ nhật là "+rectangle.perimeter());
+
+    rectangle.draw();
+
+
+</script>
+</body>
+</html>
