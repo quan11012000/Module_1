@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>
+</head>
+<body>
+<h1>Luyện tập tạo lớp, đối tượng, phương thức, và thuộc tính của đối tượng.</h1>
+<h2>Xem kết quả ở màn hình console</h2>
+<script>
+    function ucln(a,b){
+        while(a!=b){
+            a>b?a=a-b:b=b-a;
+        }
+        return a;
+    }
+    function bcnn(a,b){
+        return a*b/ucln(a,b);
+    }
+    function getTotalX(a, b) {
+        let max=bcnn(a[0],a[a.length-1]);
+        let min=ucln(b[0],b[b.length-1]);
+        if(a.length==0){
+            max=a[0];
+        }else{
+            for(let i=0;i<a.length-1;i++){
+                if(max<bcnn(a[i],a[i+1])){
+                    max=bcnn(a[i],a[i+1]);
+                }
+            }
+        }
+        if(b.length==1){
+            min=b[0];
+        }else{
+            for(let i=0;i<b.length-1;i++){
+                if(min>ucln(b[i],b[i+1])){
+                    min=ucln(b[i],b[i+1]);
+                }
+            }
+        }
+
+
+        let result=0;
+        for(let i=max;i<=min;i++){
+            let count=0;
+            for(let j=0;j<a.length;j++){
+                if(i%a[j]==0 && min%i==0){
+                    count++;
+                }
+                console.log(count);
+            }
+            if(count==a.length){
+                result++;
+                console.log(result);
+            }
+        }
+        return result;
+    }
+    getTotalX([2],[20,30,12]);
+
+
+</script>
+</body>
+</html>
